@@ -1,0 +1,1470 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+
+	<!-- Map CSS -->
+	<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css">
+
+	<!-- Libs CSS -->
+	<link rel="stylesheet" href="assets/css/libs.bundle.css">
+
+	<!-- Theme CSS -->
+	<link rel="stylesheet" href="assets/css/theme.bundle.css">
+
+	<!-- Custom Theme CSS -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+	<!-- Title -->
+	<title>System Advantage</title>
+
+
+	<!-- Custom Styles -->
+<style>
+	html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.85); /* Transparent white */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: top 0.3s ease-in-out, background-color 0.3s ease; /* Smooth transitions */
+    min-height: 70px; /* Default navbar height */
+    padding: 0.5rem 1rem;
+}
+
+/* Navbar Brand (Logo) */
+.navbar-brand-img {
+    height: 60px; /* Logo height */
+    width: auto; /* Maintain aspect ratio */
+    transform: scale(1.5); /* Reduce scale from 2 to 1.5 for better fit */
+    transform-origin: left; /* Centered scaling for consistency */
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    color: #333;
+    transition: color 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease;
+    border-radius: 25px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #919799;
+    background-color: rgba(12, 127, 194, 0.1); /* Subtle background on hover */
+}
+
+.navbar-nav .nav-link.active {
+    color: #0C7FC2; /* Active link color */
+    font-weight: 700; /* Bold active links */
+    border-bottom: 2px solid #0C7FC2; /* Underline for active link */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+    .navbar {
+        min-height: 60px;
+        padding: 0.5rem 1rem; /* Less padding on mobile */
+    }
+    
+    .navbar-brand-img {
+        transform: scale(1.3); /* Slightly smaller logo */
+        height: 40px; /* Smaller height for mobile */
+    }
+
+    .navbar-brand {
+        margin-left: auto;
+        margin-right: auto; /* Center the logo */
+        text-align: center;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 1rem;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 5px; /* Reduced margin between nav items */
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.4rem 0.5rem; /* Slightly reduced padding */
+        font-size: 0.85rem; /* Smaller font size */
+    }
+
+    /* Collapse button positioning */
+    .navbar-toggler {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.9rem;
+        margin-left: 0; /* Center the toggler on mobile */
+    }
+
+    /* Adjusting the collapsed menu */
+    .navbar-collapse {
+        margin-top: 1rem; /* Add some spacing on mobile */
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 576px) {
+    .navbar-brand {
+        margin-right: auto;
+        margin-left: left;
+    }
+
+    .navbar-brand-img {
+        transform: scale(1.2); /* Further reduced scaling */
+        height: 35px; /* Smaller logo for smaller screens */
+    }
+
+    .navbar-toggler {
+        font-size: 0.85rem;
+        margin-left: 0; /* Center the button properly */
+    }
+}
+
+/* Desktop Adjustments */
+@media (min-width: 992px) {
+    .navbar {
+        min-height: 70px;
+        padding: 1rem 2rem; /* Restore padding on larger screens */
+    }
+
+    .navbar-brand {
+        margin-left: 0;
+        margin-right: 0; /* Remove margin adjustments for desktop */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem; /* Restore font size */
+        padding: 0.8rem 1.5rem; /* Restore padding */
+    }
+
+    .navbar-brand-img {
+        height: 60px; /* Reset logo size */
+        transform: scale(1); /* No scaling on desktop */
+    }
+}
+
+
+
+		/* Particles.js background */
+		#particles-js {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: 0;
+			pointer-events: none;
+		}
+
+		/* Icon circle */
+		.icon-circle {
+			width: 80px;
+			height: 80px;
+			background: rgba(255, 255, 255, 0.1);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto 20px;
+		}
+
+		/* Glowing button */
+		.btn-glow {
+			position: relative;
+			background: linear-gradient(45deg, #00ff88, #00a1ff);
+			border: none;
+			padding: 12px 30px;
+			border-radius: 25px;
+			color: white;
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			transition: all 0.3s ease;
+			overflow: hidden;
+		}
+
+		.btn-glow:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+		}
+
+		/* Floating animation for elements */
+		@keyframes float {
+			0% {
+				transform: translateY(0px);
+			}
+
+			50% {
+				transform: translateY(-20px);
+			}
+
+			100% {
+				transform: translateY(0px);
+			}
+		}
+
+		/* Card Styles */
+		.card {
+			background: rgba(255, 255, 255, 0.9);
+			border: none;
+			box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+			transition: transform 0.3s ease;
+		}
+
+		.card:hover {
+			transform: translateY(-10px);
+		}
+
+		/* Icon large */
+		.icon-lg {
+			width: 50px;
+			height: 50px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.5rem;
+		}
+
+		/* Text styles */
+		.text-white {
+			color: white;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+
+
+	<!-- NAVBAR -->
+	<nav class="navbar navbar-expand-lg bg-white fixed-top">
+		<div class="container-fluid">
+
+			<!-- Brand -->
+			<a class="navbar-brand" href="index.html">
+				<img src="assets/img/logo.svg" class="navbar-brand-img" alt="...">
+			</a>
+
+			<!-- Toggler -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<!-- Collapse -->
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+
+				<!-- Toggler -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<i class="fa fa-times"></i>
+				</button>
+
+				<!-- Navigation -->
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+					<li class="nav-item"><a class="nav-link" href="#faq">FAQ's</a></li>
+					<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+					<li class="nav-item">
+						<a class="nav-link" href="tel:+27715848095">
+							<i class="fas fa-phone text-primary"></i>&nbsp;+27715848095
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="mailto:help@cableadvantage.co.za">
+							<i class="fas fa-envelope text-primary"></i>&nbsp;help@cableadvantage.co.za
+						</a>
+					</li>
+				</ul>
+
+			</div>
+
+		</div>
+	</nav>
+
+	<!-- WELCOME -->
+	<section id="home" sclass="mt-n10" style="background-image: url('./assets/img/hero.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 100vh; position: relative;">
+		<div id="particles-js"></div>
+		<div class="background-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.1);"></div>
+		<div class="container d-flex flex-column">
+			<div class="row align-items-center justify-content-left min-vh-100 py-8 py-md-6">
+				<div class="col-12 col-md-8 col-lg-7 mt-auto text-left">
+
+					<!-- Heading -->
+					<h1 class="display-1 mb-0 fw-bold" style="color: #ffffff;">
+
+						Empower Your Business with System Advantage.</h1>
+
+					<p class="lead mb-4" style="color: #ffffff;"><b>System Advantage delivers cutting-edge IT solutions and expert cable installations tailored to your needs. Our innovative approach ensures your business thrives with reliable network and management services.</b></p>
+
+					<a href="#about" data-scroll='{"offset": 0}' class="btn btn-glow">Get Started</a>
+
+				</div>
+
+			</div> <!-- / .row -->
+		</div> <!-- / .container -->
+	</section>
+
+
+
+	<section id="chat" class="py-8 d-flex align-items-center position-relative" style="background-image: url('./assets/img/chat.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 100vh;">
+		<!-- Background Overlay -->
+		<div class="background-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4);"></div>
+
+		<!-- Container with Centered Content -->
+		<div class="container position-relative z-index-2 text-white">
+			<!-- Centered "CHAT TO US" Card -->
+			<div class="row justify-content-center mb-5" data-aos="fade-down">
+				<div class="col-lg-8 col-md-10">
+					<div class="card bg-white p-5 shadow-lg text-center" style="border-radius: 20px;">
+						<h2 class="display-4 text-primary mb-3">CHAT TO US</h2>
+						<p class="lead mb-0 text-dark">Our team is here to help with all your IT needs. Choose the option that suits you best!</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Counters in Individual Cards -->
+			<div class="row justify-content-center mb-5">
+				<div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+					<div class="card h-100 text-center p-4 shadow-lg card-hover" style="border-radius: 15px;">
+						<h3 class="text-primary mb-2">
+							<span id="counter1">0</span>%
+						</h3>
+						<p class="font-weight-bold m-0">Satisfaction</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+					<div class="card h-100 text-center p-4 shadow-lg card-hover" style="border-radius: 15px;">
+						<h3 class="text-primary mb-2">
+							<span id="counter2">0</span>/7
+						</h3>
+						<p class="font-weight-bold m-0">Support</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+					<div class="card h-100 text-center p-4 shadow-lg card-hover" style="border-radius: 15px;">
+						<h3 class="text-primary mb-2">
+							<span id="counter3">0</span>+
+						</h3>
+						<p class="font-weight-bold m-0">Projects Delivered</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Contact Cards -->
+			<div class="row justify-content-center">
+				<!-- Call Us Card -->
+				<div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+					<div class="card h-100 border-primary shadow-lg card-hover" style="border-radius: 15px;">
+						<div class="card-body text-center p-4">
+							<i class="fas fa-phone fa-3x text-primary mb-3"></i>
+							<h4 class="card-title mb-3">Call Us</h4>
+							<p class="card-text mb-4">Speak directly with one of our IT experts.</p>
+							<a href="tel:+27715848095" class="btn btn-primary btn-lg btn-glow pulsate">Call Now</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Leave Contact Details Card -->
+				<div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+					<div class="card h-100 border-warning shadow-lg card-hover" style="border-radius: 15px;">
+						<div class="card-body text-center p-4">
+							<i class="fas fa-envelope fa-3x text-warning mb-3"></i>
+							<h4 class="card-title mb-3">Leave Contact Details</h4>
+							<p class="card-text mb-4">Fill in your contact info and we'll get back to you.</p>
+							<a href="#contact" class="btn btn-warning btn-lg btn-glow pulsate" data-bs-toggle="modal" data-bs-target="#contactModal">Leave Details</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- WhatsApp Chat Card -->
+				<div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+					<div class="card h-100 border-success shadow-lg card-hover" style="border-radius: 15px;">
+						<div class="card-body text-center p-4">
+							<i class="fab fa-whatsapp fa-3x text-success mb-3"></i>
+							<h4 class="card-title mb-3">WhatsApp Chat</h4>
+							<p class="card-text mb-4">Chat with one of our agents instantly via WhatsApp.</p>
+							<a href="https://wa.me/27715848095" class="btn btn-success btn-lg btn-glow pulsate">Chat Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Section About-->
+	<section id="about" class="py-8 d-flex align-items-center position-relative" style="background-image: url('./assets/img/about.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 100vh; position: relative;">
+		<div class="background-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.1);"></div>
+
+		<div class="container position-relative d-flex justify-content-center align-items-center" style="z-index: 2; min-height: 100vh;">
+			<!-- Responsive Card: Full width on smaller screens, aligned to right on larger screens -->
+			<div class="col-lg-12 col-md-10 col-sm-12">
+				<div class="card bg-white p-5 shadow-lg" style="opacity: 0.9; max-width: 100%;">
+					<h2 class="h1 mb-4 text-primary" data-aos="fade-up">About System Advantage</h2>
+					<p class="fs-lg mb-4 text-dark" data-aos="fade-up" data-aos-delay="100">System Advantage brings over a decade of experience in delivering comprehensive ICT solutions. Our expertise covers network installations, Wi-Fi solutions, CCTV, access control, and more, for both commercial and residential clients.</p>
+					<p class="fs-lg mb-4 text-dark" data-aos="fade-up" data-aos-delay="200">We pride ourselves on our dedication to high-quality services, using the best technologies to enhance the efficiency and security of our clients' infrastructures.</p>
+
+					<!-- List with checkmarks -->
+					<ul class="list-unstyled">
+						<li class="d-flex py-2" data-aos="fade-up" data-aos-delay="300">
+							<i class="bi-check-circle text-primary me-2"></i>
+							<span class="text-dark">Experienced team with over 10 years in ICT services.</span>
+						</li>
+						<li class="d-flex py-2" data-aos="fade-up" data-aos-delay="400">
+							<i class="bi-check-circle text-primary me-2"></i>
+							<span class="text-dark">Tailored solutions for diverse technology needs.</span>
+						</li>
+						<li class="d-flex py-2" data-aos="fade-up" data-aos-delay="500">
+							<i class="bi-check-circle text-primary me-2"></i>
+							<span class="text-dark">Commitment to customer satisfaction and long-term support.</span>
+						</li>
+						<li class="d-flex py-2" data-aos="fade-up" data-aos-delay="600">
+							<i class="bi-check-circle text-primary me-2"></i>
+							<span class="text-dark">Competitive pricing without compromising quality.</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Section -->
+
+	<!-- Section Endpoint -->
+	<section id="endpoint-security" class="py-8 d-flex align-items-center position-relative" style="background-image: url('./assets/img/endpoint.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 100vh;">
+		<div class="background-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.1);"></div> <!-- Semi-transparent overlay -->
+
+		<div class="container position-relative" style="z-index: 2;">
+			<div class="row justify-content-center">
+				<!-- Card for Text Content -->
+				<div class="col-lg-12">
+					<div class="card bg-white p-5 shadow-lg" style="opacity: 0.9;">
+						<!-- Full Section Heading -->
+						<div class="col-12 text-center mb-5" data-aos="fade-up">
+							<h2 class="h1 text-primary fw-bold">System Advantage Endpoint Security Plus</h2>
+							<p class="fs-lg text-muted">Comprehensive security, performance optimization, and proactive management for your IT infrastructure.</p>
+						</div>
+
+						<div class="row">
+							<!-- Left Section: Endpoint Security Overview and Benefits -->
+							<div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
+								<h3 class="h2 text-dark fw-bold mb-4">Overview</h3>
+								<p class="fs-lg text-dark fw-bold mb-4">
+									Protect your business with the comprehensive security of <strong>System Advantage Endpoint Security Plus</strong>. This solution provides advanced protection against modern threats to ensure your data, devices, and infrastructure remain secure.
+								</p>
+
+								<!-- Flexbox for Lists -->
+								<div class="row">
+									<!-- First List -->
+									<div class="col-md-6" data-aos="fade-right">
+										<ul class="list-unstyled">
+											<li class="d-flex align-items-center py-2">
+												<i class="bi-shield-lock text-primary me-2 icon-large"></i>
+												<span class="text-dark fw-bold">Advanced threat protection for all endpoints.</span>
+											</li>
+											<li class="d-flex align-items-center py-2">
+												<i class="bi-clock-history text-primary me-2 icon-large"></i>
+												<span class="text-dark fw-bold">Real-time monitoring and automated responses.</span>
+											</li>
+											<li class="d-flex align-items-center py-2">
+												<i class="bi-laptop text-primary me-2 icon-large"></i>
+												<span class="text-dark fw-bold">Seamless integration across all devices.</span>
+											</li>
+											<li class="d-flex align-items-center py-2">
+												<i class="bi-motherboard text-primary me-2 icon-large"></i>
+												<span class="text-dark fw-bold">Preventing hardware failures and mitigating vulnerabilities</span>
+											</li>
+										</ul>
+									</div>
+
+									<!-- Second List -->
+									<div class="col-md-6" data-aos="fade-left">
+										<ul class="list-unstyled">
+											<li class="d-flex align-items-center py-2">
+												<i class="bi-arrows-fullscreen text-primary me-2 icon-large"></i>
+												<span class="text-dark fw-bold">One integrated platform to manage hardware and software.</span>
+											</li>
+											<li class="d-flex align-items-center py-2">
+												<i class="bi-shield-shaded text-primary me-2 icon-large"></i>
+												<span class="text-dark fw-bold">Ensures security, optimization, and virus protection.</span>
+											</li>
+											<li class="d-flex align-items-center py-2">
+												<i class="bi-shield-check text-primary me-2 icon-large"></i>
+												<span class="text-dark fw-bold">Keeps your devices free from viruses.</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<!-- Right Section: Pricing -->
+							<div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
+								<!-- Pricing Section -->
+								<div class="pricing-box mt-4 text-center">
+									<h3 class="h2 text-primary fw-bold">Only R99.00 <small class="text-muted fw-bold">per month</small></h3>
+									<p class="fs-lg text-dark fw-bold">Get started with System Advantage Endpoint Security Plus today at an affordable rate.</p>
+									<a href="#contact" class="btn btn-primary btn-lg mt-3 pulsate">Subscribe Now</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Section -->
+
+
+	<!-- Section Future -->
+	<section id="future" class="py-8 d-flex align-items-center position-relative" style="background-image: url('./assets/img/coding.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+		<div class="background-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.1);"></div> <!-- Optional: Add a semi-transparent overlay to darken the background image -->
+
+		<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh; z-index: 2;">
+			<!-- Centered Card with Increased Width -->
+			<div class="col-lg-12">
+				<div class="card bg-white p-5 shadow-lg mx-auto" style="opacity: 0.9;">
+					<h3 class="h1 mb-3 text-center">Future-Proof Your Business with Our IT Solutions</h3>
+					<p class="fs-lg pb-3 text-center">At System Advantage, we offer more than just IT services. Our innovative solutions include sales, repairs, and web development, ensuring that your business is equipped for the future of technology.</p>
+
+					<!-- Features -->
+					<div class="d-flex mb-4" data-aos="fade-up" data-aos-delay="100">
+						<div class="icon-sm  text-white rounded-circle"><i class="bi-check-circle text-primary me-2"></i></div>
+						<div class="col ps-3">
+							<h5><b>Cloud Integration</b></h5>
+							<p class="m-0 w-lg-90">Seamlessly move your data and operations to the cloud, enabling flexibility, scalability, and remote accessibility.</p>
+						</div>
+					</div>
+
+					<div class="d-flex mb-4" data-aos="fade-up" data-aos-delay="200">
+						<div class="icon-sm  text-white rounded-circle"><i class="bi-check-circle text-primary me-2"></i></div>
+						<div class="col ps-3">
+							<h5><b>IoT Connectivity</b></h5>
+							<p class="m-0 w-lg-90">Connect smart devices to enhance productivity and streamline operations.</p>
+						</div>
+					</div>
+
+					<div class="d-flex mb-4" data-aos="fade-up" data-aos-delay="300">
+						<div class="icon-sm  text-white rounded-circle"><i class="bi-check-circle text-primary me-2"></i></div>
+						<div class="col ps-3">
+							<h5><b>Sales & Repairs</b></h5>
+							<p class="m-0 w-lg-90">We offer sales of the latest tech equipment and reliable repair services for your IT infrastructure.</p>
+						</div>
+					</div>
+
+					<div class="d-flex mb-4" data-aos="fade-up" data-aos-delay="400">
+						<div class="icon-sm  text-white rounded-circle"><i class="bi-check-circle text-primary me-2"></i></div>
+						<div class="col ps-3">
+							<h5><b>Web Development</b></h5>
+							<p class="m-0 w-lg-90">Custom web development services to ensure your online presence is optimized for performance and security.</p>
+						</div>
+					</div>
+
+					<div class="d-flex" data-aos="fade-up" data-aos-delay="500">
+						<div class="icon-sm  text-white rounded-circle"><i class="bi-check-circle text-primary me-2"></i></div>
+						<div class="col ps-3">
+							<h5><b>AI & Automation</b></h5>
+							<p class="m-0 w-lg-90">Automate routine tasks with AI-driven systems, freeing up valuable resources for your core business activities.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Section -->
+
+
+	<!-- Section Services -->
+	<section id="services" class="py-8 d-flex align-items-center position-relative" style="background-image: url('./assets/img/services.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+		<div class="background-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.1);"></div>
+
+		<div class="container position-relative" style="min-height: 80vh; z-index: 2;">
+			<!-- Section Heading -->
+			<div class="row justify-content-center mb-5" data-aos="fade-up">
+				<div class="col-lg-8">
+					<div class="card p-4 shadow-lg text-center" style="background-color: rgba(255, 255, 255, 0.9); border-radius: 15px;">
+						<h2 class="display-4 text-primary mb-3">Comprehensive IT Services</h2>
+						<p class="lead text-dark">At System Advantage, we offer a wide array of IT solutions designed to help your business grow and stay future-ready.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Services Grid -->
+			<div class="row g-4">
+				<!-- Managed IT Services -->
+				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+					<div class="card h-100 shadow-sm hover-translate-y-n10 hover-shadow-lg">
+						<div class="card-body p-4">
+							<div class="icon-lg bg-primary text-white rounded-circle mb-3" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+								<i class="fas fa-network-wired fa-lg"></i>
+							</div>
+							<h5 class="card-title mb-3">Managed IT Services</h5>
+							<p class="card-text">Proactive management and monitoring of your IT infrastructure, saving time and ensuring seamless operations.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Cloud IT Solutions -->
+				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+					<div class="card h-100 shadow-sm hover-translate-y-n10 hover-shadow-lg">
+						<div class="card-body p-4">
+							<div class="icon-lg bg-primary text-white rounded-circle mb-3" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+								<i class="fas fa-cloud fa-lg"></i>
+							</div>
+							<h5 class="card-title mb-3">Cloud IT Solutions</h5>
+							<p class="card-text">Move your operations to the cloud with scalable, reliable solutions designed to optimize business efficiency.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Internet Solutions -->
+				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+					<div class="card h-100 shadow-sm hover-translate-y-n10 hover-shadow-lg">
+						<div class="card-body p-4">
+							<div class="icon-lg bg-primary text-white rounded-circle mb-3" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+								<i class="fas fa-wifi fa-lg"></i>
+							</div>
+							<h5 class="card-title mb-3">Internet Solutions</h5>
+							<p class="card-text">Fast, secure, and always-on internet connectivity tailored to your business needs.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Network Installation -->
+				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+					<div class="card h-100 shadow-sm hover-translate-y-n10 hover-shadow-lg">
+						<div class="card-body p-4">
+							<div class="icon-lg bg-primary text-white rounded-circle mb-3" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+								<i class="fas fa-cogs fa-lg"></i>
+							</div>
+							<h5 class="card-title mb-3">Network Installation</h5>
+							<p class="card-text">Secure, high-performance network installations for both home and business.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- CCTV & Security -->
+				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+					<div class="card h-100 shadow-sm hover-translate-y-n10 hover-shadow-lg">
+						<div class="card-body p-4">
+							<div class="icon-lg bg-primary text-white rounded-circle mb-3" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+								<i class="fas fa-video fa-lg"></i>
+							</div>
+							<h5 class="card-title mb-3">CCTV & Security</h5>
+							<p class="card-text">Advanced surveillance systems and access control for a secure environment.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- AV Solutions -->
+				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+					<div class="card h-100 shadow-sm hover-translate-y-n10 hover-shadow-lg">
+						<div class="card-body p-4">
+							<div class="icon-lg bg-primary text-white rounded-circle mb-3" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+								<i class="fas fa-laptop fa-lg"></i>
+							</div>
+							<h5 class="card-title mb-3">AV Solutions</h5>
+							<p class="card-text">High-quality audio-visual systems designed for your business meetings and conferences.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- IT Design & Implementation -->
+				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+					<div class="card h-100 shadow-sm hover-translate-y-n10 hover-shadow-lg">
+						<div class="card-body p-4">
+							<div class="icon-lg bg-primary text-white rounded-circle mb-3" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+								<i class="fas fa-project-diagram fa-lg"></i>
+							</div>
+							<h5 class="card-title mb-3">IT Design & Implementation</h5>
+							<p class="card-text">Customized IT project design, ensuring smooth implementation from start to finish.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Data Solutions -->
+				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="800">
+					<div class="card h-100 shadow-sm hover-translate-y-n10 hover-shadow-lg">
+						<div class="card-body p-4">
+							<div class="icon-lg bg-primary text-white rounded-circle mb-3" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+								<i class="fas fa-database fa-lg"></i>
+							</div>
+							<h5 class="card-title mb-3">Data Solutions</h5>
+							<p class="card-text">Comprehensive data management, storage, and backup solutions to secure your business-critical information.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Section -->
+
+	<!-- Faq Section -->
+	<section id="faq" class="py-8 d-flex align-items-center position-relative" style="background-image: url('./assets/img/faq01.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+		<div class="background-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.1);"></div>
+
+		<div class="container position-relative z-index-2">
+			<!-- FAQs Heading -->
+			<h2 class="h1 mb-5 text-center text-white" data-aos="fade-up">
+				<i class="fas fa-question-circle me-2"></i> Frequently Asked Questions
+			</h2>
+
+			<!-- FAQ Sections -->
+			<div class="row align-items-start">
+				<div class="col-lg-12 ms-lg-auto">
+					<!-- IT Outsourcing Section -->
+					<div id="outsourcing" class="mb-5" data-aos="fade-up">
+						<h3 class="text-white mb-3">
+							<i class="fas fa-laptop-code me-2"></i> IT Outsourcing
+						</h3>
+						<div class="accordion shadow-lg rounded-3 mt-3" id="accordionExample_outsourcing">
+							<!-- Question 1 -->
+							<div class="accordion-item" style="background-color: rgba(255, 255, 255, 0.85);" data-aos="fade-right">
+								<h2 class="accordion-header" id="heading_out_1">
+									<button class="py-4 accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_out_1" aria-expanded="true" aria-controls="collapse_out_1">
+										<i class="fas fa-external-link-alt me-2"></i> What is IT outsourcing, and how can it benefit my business?
+									</button>
+								</h2>
+								<div id="collapse_out_1" class="accordion-collapse collapse show" aria-labelledby="heading_out_1" data-bs-parent="#accordionExample_outsourcing">
+									<div class="accordion-body">
+										IT outsourcing allows businesses to access specialized IT expertise, reduce costs, and focus on core operations while IT needs are managed by a third party.
+									</div>
+								</div>
+							</div>
+							<!-- Question 2 -->
+							<div class="accordion-item" style="background-color: rgba(255, 255, 255, 0.85);" data-aos="fade-right" data-aos-delay="100">
+								<h2 class="accordion-header" id="heading_out_2">
+									<button class="py-4 accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_out_2" aria-expanded="false" aria-controls="collapse_out_2">
+										<i class="fas fa-network-wired me-2"></i> How does System Advantage manage outsourced IT services remotely?
+									</button>
+								</h2>
+								<div id="collapse_out_2" class="accordion-collapse collapse" aria-labelledby="heading_out_2" data-bs-parent="#accordionExample_outsourcing">
+									<div class="accordion-body">
+										We utilize advanced monitoring systems and secure remote access tools to manage, troubleshoot, and maintain your IT infrastructure efficiently.
+									</div>
+								</div>
+							</div>
+							<!-- Question 3 -->
+							<div class="accordion-item" style="background-color: rgba(255, 255, 255, 0.85);" data-aos="fade-right" data-aos-delay="200">
+								<h2 class="accordion-header" id="heading_out_3">
+									<button class="py-4 accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_out_3" aria-expanded="false" aria-controls="collapse_out_3">
+										<i class="fas fa-cogs me-2"></i> Can I customize the services provided through outsourcing?
+									</button>
+								</h2>
+								<div id="collapse_out_3" class="accordion-collapse collapse" aria-labelledby="heading_out_3" data-bs-parent="#accordionExample_outsourcing">
+									<div class="accordion-body">
+										Yes, our services are fully customizable to meet the specific needs and goals of your business, ensuring optimal IT performance.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Cloud Services Section -->
+					<div id="cloud" class="mb-5" data-aos="fade-up">
+						<h3 class="text-white mb-3">
+							<i class="fas fa-cloud me-2"></i> Cloud Services
+						</h3>
+						<div class="accordion shadow-lg rounded-3 mt-3" id="accordionExample_cloud">
+							<!-- Question 1 -->
+							<div class="accordion-item" style="background-color: rgba(255, 255, 255, 0.85);" data-aos="fade-left">
+								<h2 class="accordion-header" id="heading_cloud_1">
+									<button class="py-4 accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_cloud_1" aria-expanded="true" aria-controls="collapse_cloud_1">
+										<i class="fas fa-cloud-upload-alt me-2"></i> What are the benefits of moving to cloud-based solutions?
+									</button>
+								</h2>
+								<div id="collapse_cloud_1" class="accordion-collapse collapse show" aria-labelledby="heading_cloud_1" data-bs-parent="#accordionExample_cloud">
+									<div class="accordion-body">
+										Cloud solutions provide flexibility, scalability, cost efficiency, and secure access to your data from any location.
+									</div>
+								</div>
+							</div>
+							<!-- Question 2 -->
+							<div class="accordion-item" style="background-color: rgba(255, 255, 255, 0.85);" data-aos="fade-left" data-aos-delay="100">
+								<h2 class="accordion-header" id="heading_cloud_2">
+									<button class="py-4 accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_cloud_2" aria-expanded="false" aria-controls="collapse_cloud_2">
+										<i class="fas fa-database me-2"></i> How does System Advantage handle data migration to the cloud?
+									</button>
+								</h2>
+								<div id="collapse_cloud_2" class="accordion-collapse collapse" aria-labelledby="heading_cloud_2" data-bs-parent="#accordionExample_cloud">
+									<div class="accordion-body">
+										We ensure a smooth and secure data migration process by using the latest tools and best practices to minimize downtime and risk.
+									</div>
+								</div>
+							</div>
+							<!-- Question 3 -->
+							<div class="accordion-item" style="background-color: rgba(255, 255, 255, 0.85);" data-aos="fade-left" data-aos-delay="200">
+								<h2 class="accordion-header" id="heading_cloud_3">
+									<button class="py-4 accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_cloud_3" aria-expanded="false" aria-controls="collapse_cloud_3">
+										<i class="fas fa-expand-arrows-alt me-2"></i> Can I scale cloud services as my business grows?
+									</button>
+								</h2>
+								<div id="collapse_cloud_3" class="accordion-collapse collapse" aria-labelledby="heading_cloud_3" data-bs-parent="#accordionExample_cloud">
+									<div class="accordion-body">
+										Yes, our cloud services are scalable, allowing your IT infrastructure to grow alongside your business, ensuring you always have the resources you need.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Network Solutions Section -->
+					<div id="network" class="mb-5" data-aos="fade-up">
+						<h3 class="text-white mb-3">
+							<i class="fas fa-network-wired me-2"></i> Network Solutions
+						</h3>
+						<div class="accordion shadow-lg rounded-3 mt-3" id="accordionExample_network">
+							<!-- Question 1 -->
+							<div class="accordion-item" style="background-color: rgba(255, 255, 255, 0.85);" data-aos="fade-right">
+								<h2 class="accordion-header" id="heading_network_1">
+									<button class="py-4 accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_network_1" aria-expanded="true" aria-controls="collapse_network_1">
+										<i class="fas fa-wifi me-2"></i> What types of network installations does System Advantage offer?
+									</button>
+								</h2>
+								<div id="collapse_network_1" class="accordion-collapse collapse show" aria-labelledby="heading_network_1" data-bs-parent="#accordionExample_network">
+									<div class="accordion-body">
+										We offer customized network installations for home and business, including LAN, WAN, and wireless networks, ensuring optimal performance and security.
+									</div>
+								</div>
+							</div>
+							<!-- Question 2 -->
+							<div class="accordion-item" style="background-color: rgba(255, 255, 255, 0.85);" data-aos="fade-right" data-aos-delay="100">
+								<h2 class="accordion-header" id="heading_network_2">
+									<button class="py-4 accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_network_2" aria-expanded="false" aria-controls="collapse_network_2">
+										<i class="fas fa-shield-alt me-2"></i> How secure are the network solutions provided?
+									</button>
+								</h2>
+								<div id="collapse_network_2" class="accordion-collapse collapse" aria-labelledby="heading_network_2" data-bs-parent="#accordionExample_network">
+									<div class="accordion-body">
+										Our network solutions incorporate advanced security protocols to protect your infrastructure from unauthorized access, cyber threats, and data breaches.
+									</div>
+								</div>
+							</div>
+							<!-- Question 3 -->
+							<div class="accordion-item" style="background-color: rgba(255, 255, 255, 0.85);" data-aos="fade-right" data-aos-delay="200">
+								<h2 class="accordion-header" id="heading_network_3">
+									<button class="py-4 accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_network_3" aria-expanded="false" aria-controls="collapse_network_3">
+										<i class="fas fa-plug me-2"></i> Can you integrate new networks with our existing infrastructure?
+									</button>
+								</h2>
+								<div id="collapse_network_3" class="accordion-collapse collapse" aria-labelledby="heading_network_3" data-bs-parent="#accordionExample_network">
+									<div class="accordion-body">
+										Yes, we specialize in integrating new networks with your current infrastructure to ensure seamless connectivity and scalability without interruptions.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Cybersecurity Section -->
+					<div id="cybersecurity" class="mb-5" data-aos="fade-up">
+						<h3 class="text-white mb-3">
+							<i class="fas fa-shield-virus me-2"></i> Cybersecurity
+						</h3>
+						<div class="accordion shadow-lg rounded-3 mt-3" id="accordionExample_cybersecurity">
+							<!-- Question 1 -->
+							<div class="accordion-item" style="background-color: rgba(255, 255, 255, 0.85);" data-aos="fade-left">
+								<h2 class="accordion-header" id="heading_cyber_1">
+									<button class="py-4 accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_cyber_1" aria-expanded="true" aria-controls="collapse_cyber_1">
+										<i class="fas fa-user-shield me-2"></i> What cybersecurity measures does System Advantage implement?
+									</button>
+								</h2>
+								<div id="collapse_cyber_1" class="accordion-collapse collapse show" aria-labelledby="heading_cyber_1" data-bs-parent="#accordionExample_cybersecurity">
+									<div class="accordion-body">
+										We implement advanced firewalls, encryption protocols, intrusion detection systems, and regular security audits to safeguard your data and infrastructure.
+									</div>
+								</div>
+							</div>
+							<!-- Question 2 -->
+							<div class="accordion-item" style="background-color: rgba(255, 255, 255, 0.85);" data-aos="fade-left" data-aos-delay="100">
+								<h2 class="accordion-header" id="heading_cyber_2">
+									<button class="py-4 accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_cyber_2" aria-expanded="false" aria-controls="collapse_cyber_2">
+										<i class="fas fa-lock me-2"></i> How do you protect data during cloud migrations?
+									</button>
+								</h2>
+								<div id="collapse_cyber_2" class="accordion-collapse collapse" aria-labelledby="heading_cyber_2" data-bs-parent="#accordionExample_cybersecurity">
+									<div class="accordion-body">
+										We use end-to-end encryption, secure access controls, and continuous monitoring to ensure your data is protected during the migration process.
+									</div>
+								</div>
+							</div>
+							<!-- Question 3 -->
+							<div class="accordion-item" style="background-color: rgba(255, 255, 255, 0.85);" data-aos="fade-left" data-aos-delay="200">
+								<h2 class="accordion-header" id="heading_cyber_3">
+									<button class="py-4 accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_cyber_3" aria-expanded="false" aria-controls="collapse_cyber_3">
+										<i class="fas fa-eye me-2"></i> Do you offer monitoring services for cybersecurity threats?
+									</button>
+								</h2>
+								<div id="collapse_cyber_3" class="accordion-collapse collapse" aria-labelledby="heading_cyber_3" data-bs-parent="#accordionExample_cybersecurity">
+									<div class="accordion-body">
+										Yes, our team provides 24/7 monitoring to detect and respond to cybersecurity threats in real-time, minimizing risks and potential damage.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Support & Maintenance Section -->
+					<div id="support" class="mb-5" data-aos="fade-up">
+						<h3 class="text-white mb-3">
+							<i class="fas fa-headset me-2"></i> Support & Maintenance
+						</h3>
+						<div class="accordion shadow-lg rounded-3 mt-3" id="accordionExample_support">
+							<!-- Question 1 -->
+							<div class="accordion-item" style="background-color: rgba(255, 255, 255, 0.85);" data-aos="fade-right">
+								<h2 class="accordion-header" id="heading_support_1">
+									<button class="py-4 accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_support_1" aria-expanded="true" aria-controls="collapse_support_1">
+										<i class="fas fa-tools me-2"></i> What are the available support options for ongoing IT maintenance?
+									</button>
+								</h2>
+								<div id="collapse_support_1" class="accordion-collapse collapse show" aria-labelledby="heading_support_1" data-bs-parent="#accordionExample_support">
+									<div class="accordion-body">
+										We offer both on-site and remote support options, including regular system maintenance, troubleshooting, and 24/7 emergency services.
+									</div>
+								</div>
+							</div>
+							<!-- Question 2 -->
+							<div class="accordion-item" style="background-color: rgba(255, 255, 255, 0.85);" data-aos="fade-right" data-aos-delay="100">
+								<h2 class="accordion-header" id="heading_support_2">
+									<button class="py-4 accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_support_2" aria-expanded="false" aria-controls="collapse_support_2">
+										<i class="fas fa-clock me-2"></i> How quickly can support be deployed in case of a critical issue?
+									</button>
+								</h2>
+								<div id="collapse_support_2" class="accordion-collapse collapse" aria-labelledby="heading_support_2" data-bs-parent="#accordionExample_support">
+									<div class="accordion-body">
+										Our emergency support services ensure that we can respond to critical issues within hours, minimizing downtime and restoring operations swiftly.
+									</div>
+								</div>
+							</div>
+							<!-- Question 3 -->
+							<div class="accordion-item" style="background-color: rgba(255, 255, 255, 0.85);" data-aos="fade-right" data-aos-delay="200">
+								<h2 class="accordion-header" id="heading_support_3">
+									<button class="py-4 accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_support_3" aria-expanded="false" aria-controls="collapse_support_3">
+										<i class="fas fa-headphones-alt me-2"></i> Does System Advantage offer 24/7 support services?
+									</button>
+								</h2>
+								<div id="collapse_support_3" class="accordion-collapse collapse" aria-labelledby="heading_support_3" data-bs-parent="#accordionExample_support">
+									<div class="accordion-body">
+										Yes, we offer 24/7 support services to ensure your IT systems are always operational, and critical issues are addressed immediately.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- End Section -->
+
+	<!-- Contact Section -->
+	<section id="contact" class="py-8 d-flex align-items-center position-relative" style="background-image: url('./assets/img/contact-us.png'); background-size: cover; background-position: center; position: relative;">
+		<div class="background-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
+		<div class="container position-relative py-5" style="z-index: 2;">
+			<!-- Section Heading -->
+			<div class="row justify-content-center mb-5" data-aos="fade-up">
+				<div class="col-lg-8">
+					<div class="card p-4 shadow-lg text-center" style="background-color: rgba(255, 255, 255, 0.9); border-radius: 15px;">
+						<h2 class="display-4 mt-3 text-primary">Get in Touch</h2>
+						<p class="fs-5 text-muted">Have questions or need support? We're here to help. Reach out to System Advantage for all your IT needs, and our expert team will get back to you promptly.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<!-- Contact Form -->
+				<div class="col-lg-7 mb-5 mb-lg-0" data-aos="fade-right">
+					<div class="card shadow-lg" style="background-color: rgba(255, 255, 255, 0.9); border-radius: 15px;">
+						<div class="card-body p-5">
+							<!-- Dynamic Alert Section (to show success/error messages) -->
+							<div id="alert-placeholder"></div>
+							<form method="post" action="submit.php">
+								<div class="row g-4">
+									<div class="col-md-6">
+										<div class="form-floating">
+											<input type="text" class="form-control" id="contact-name" name="name" placeholder="Your Name" required>
+											<label for="contact-name">Your Name</label>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-floating">
+											<input type="tel" class="form-control" id="contact-phone" name="phone" placeholder="Phone No." required>
+											<label for="contact-phone">Phone No.</label>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-floating">
+											<input type="email" class="form-control" id="contact-email" name="email" placeholder="Your Email" required>
+											<label for="contact-email">Your Email</label>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-floating">
+											<select class="form-select" id="contact-subject" name="subject" required>
+												<option value="" disabled selected>Select a service</option>
+												<option value="Subscribe to System Advantage">Subscribe to System Advantage</option>
+												<option value="Managed IT Services">Managed IT Services</option>
+												<option value="Cloud IT Solutions">Cloud IT Solutions</option>
+												<option value="Internet Solutions">Internet Solutions</option>
+												<option value="Network Installation">Network Installation</option>
+												<option value="CCTV & Security">CCTV & Security</option>
+												<option value="AV Solutions">AV Solutions</option>
+												<option value="IT Design & Implementation">IT Design & Implementation</option>
+												<option value="Data Solutions">Data Solutions</option>
+											</select>
+											<label for="contact-subject">Subject</label>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-floating">
+											<textarea class="form-control" id="contact-message" name="message" placeholder="Your Message" style="height: 150px" required></textarea>
+											<label for="contact-message">Message</label>
+										</div>
+									</div>
+									<div class="col-12">
+										<button class="btn btn-primary w-100 py-3" type="submit" name="send">Send Message</button>
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</div>
+				</div>
+
+				<!-- Contact Info Cards -->
+				<div class="col-lg-5" data-aos="fade-left">
+					<div class="d-flex flex-column h-100">
+						<div class="card mb-3 shadow-lg flex-grow-1" style="background-color: rgba(255, 255, 255, 0.9); border-radius: 15px;">
+							<div class="card-body d-flex align-items-center p-3">
+								<div class="icon-lg bg-primary text-white rounded-circle me-3" style="min-width: 40px; height: 40px; line-height: 40px; text-align: center;">
+									<i class="fas fa-envelope"></i>
+								</div>
+								<div>
+									<h6 class="mb-1">Email Us</h6>
+									<p class="mb-0 small"><a href="mailto:help@cableadvantage.co.za" class="text-primary text-decoration-none">help@cableadvantage.co.za</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="card mb-3 shadow-lg flex-grow-1" style="background-color: rgba(255, 255, 255, 0.9); border-radius: 15px;">
+							<div class="card-body d-flex align-items-center p-3">
+								<div class="icon-lg bg-primary text-white rounded-circle me-3" style="min-width: 40px; height: 40px; line-height: 40px; text-align: center;">
+									<i class="fas fa-phone"></i>
+								</div>
+								<div>
+									<h6 class="mb-1">Call Us</h6>
+									<p class="mb-0 small"><a href="tel:+27715848095" class="text-primary text-decoration-none">+27 71 584 8095</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="card shadow-lg flex-grow-1" style="background-color: rgba(255, 255, 255, 0.9); border-radius: 15px;">
+							<div class="card-body d-flex align-items-center p-3">
+								<div class="icon-lg bg-primary text-white rounded-circle me-3" style="min-width: 40px; height: 40px; line-height: 40px; text-align: center;">
+									<i class="fas fa-map-marked-alt"></i>
+								</div>
+								<div>
+									<h6 class="mb-1">Visit Us</h6>
+									<p class="mb-0 small">
+										<a href="https://www.google.co.za/maps/place/Cable+Advantage/@-25.7120458,28.1791797,15z/data=!4m2!3m1!1s0x0:0x9fc531efbc149de3?sa=X&ved=1t:2428&ictx=111" target="_blank" class="text-primary text-decoration-none">
+											599 Smook Ave, Roseville, Pretoria, South Africa, 0084
+										</a>
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- End Section -->
+
+
+
+
+	<!-- SHAPE -->
+	<div class="position-relative">
+		<div class="shape shape-bottom shape-fluid-x text-dark">
+			<svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="#ffffff" />
+			</svg>
+		</div>
+	</div>
+
+	<!-- FOOTER -->
+	<footer class="py-4 bg-light text-dark">
+		<div class="container">
+			<div class="row">
+				<!-- Brand and Description -->
+				<div class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0 text-center text-md-start">
+					<img src="assets/img/logo.svg" alt="..." class="footer-brand img-fluid mb-2" style="max-width: 100px;">
+					<p class="small text-muted">
+						Delivering Tailored IT solutions for home and businesses.
+					</p>
+
+				</div>
+
+				<!-- Company Links with Icons -->
+				<div class="col-6 col-md-6 col-lg-2 mb-3 mb-lg-0 text-center text-md-start">
+					<h6 class="fw-bold small text-uppercase text-primary">Company</h6>
+					<ul class="list-unstyled">
+						<li class="mb-2">
+							<a href="#about" class=" small d-flex align-items-center justify-content-md-start text-muted text-decoration-none">
+								<i class="fas fa-info-circle me-2"></i> About Us
+							</a>
+						</li>
+						<li class="mb-2">
+							<a href="#services" class=" small d-flex align-items-center justify-content-md-start text-muted text-decoration-none">
+								<i class="fas fa-cogs me-2"></i> Services
+							</a>
+						</li>
+						<li class="mb-2">
+							<a href="#faq" class=" small d-flex align-items-center justify-content-md-start text-muted text-decoration-none">
+								<i class="fas fa-question-circle me-2"></i> FAQs
+							</a>
+						</li>
+						<li>
+							<a href="#contact" class=" small d-flex align-items-center justify-content-md-start text-muted text-decoration-none">
+								<i class="fas fa-envelope me-2"></i> Contact Us
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Services Links with Icons -->
+				<div class="col-6 col-md-6 col-lg-2 mb- mb-lg-0 text-center text-md-start">
+					<h6 class="fw-bold small text-uppercase text-primary">Services</h6>
+					<ul class="list-unstyled">
+						<li>
+							<a href="#services" class=" small d-flex align-items-center justify-content-md-start text-muted text-decoration-none">
+								<i class="fas fa-network-wired me-2"></i> Managed IT
+							</a>
+						</li>
+						<li class="mb-2">
+							<a href="#services" class=" small d-flex align-items-center justify-content-md-start text-muted text-decoration-none">
+								<i class="fas fa-cloud me-2"></i> Cloud Solutions
+							</a>
+						</li>
+						<li class="mb-2">
+							<a href="#services" class=" small d-flex align-items-center justify-content-md-start text-muted text-decoration-none">
+								<i class="fas fa-lock me-2"></i> Cybersecurity
+							</a>
+						</li>
+						<li>
+							<a href="#services" class=" small d-flex align-items-center justify-content-md-start text-muted text-decoration-none">
+								<i class="fas fa-wrench me-2"></i> Support
+							</a>
+						</li>
+
+					</ul>
+				</div>
+
+				<!-- Legal Links with Icons -->
+				<div class="col-6 col-md-6 col-lg-2 text-center text-md-start mb-3 mb-lg-0">
+					<h6 class="fw-bold small text-uppercase text-primary">Legal</h6>
+					<ul class="list-unstyled">
+						<li class="mb-2">
+							<a href="#!" class=" small d-flex align-items-center justify-content-md-start text-muted text-decoration-none">
+								<i class="fas fa-file-alt me-2"></i> Privacy Policy
+							</a>
+						</li>
+						<li class="mb-2">
+							<a href="#!" class=" small d-flex align-items-center justify-content-md-start text-muted text-decoration-none">
+								<i class="fas fa-file-contract me-2"></i> Terms & Conditions
+							</a>
+						</li>
+						<li>
+							<a href="#!" class=" small d-flex align-items-center justify-content-md-start text-muted text-decoration-none">
+								<i class="fas fa-cookie-bite me-2"></i> Cookie Policy
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Social Links with Icons -->
+				<div class="col-6 col-md-6 col-lg-3 text-center text-md-start">
+					<h6 class="fw-bold small text-uppercase text-primary">Social</h6>
+					<ul class="list-unstyled">
+						<li class="mb-2">
+							<a href="https://www.instagram.com/cableadvantage/" target="_blank" class=" small d-flex align-items-center justify-content-md-start text-muted text-decoration-none">
+								<i class="fab fa-instagram me-2"></i> Instagram
+							</a>
+						</li>
+						<li class="mb-2">
+							<a href="https://www.facebook.com/cableadvantage" target="_blank" class=" small d-flex align-items-center justify-content-md-start text-muted text-decoration-none">
+								<i class="fab fa-facebook-f me-2"></i> Facebook
+							</a>
+						</li>
+						<li class="mb-2">
+							<a href="https://www.linkedin.com/company/101450453" target="_blank" class=" small d-flex align-items-center justify-content-md-start text-muted text-decoration-none">
+								<i class="fab fa-linkedin-in me-2"></i> Linkedin
+							</a>
+						</li>
+						<li>
+							<a href="https://www.tiktok.com/@cable.advantage" target="_blank" class=" small d-flex align-items-center justify-content-md-start text-muted text-decoration-none">
+								<i class="fab fa-tiktok me-2"></i> Tiktok
+							</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+		<p class="small text-muted d-flex justify-content-center align-items-center" style="height: 100px;">
+			&copy; <span id="currentYear"></span> &nbsp; System Advantage All Rights Reserved.
+		</p>
+	</footer>
+
+	<!-- JAVASCRIPT -->
+	<!-- Map JS -->
+	<script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+	<!-- Vendor JS -->
+	<script src="assets/js/vendor.bundle.js"></script>
+
+	<!-- Theme JS -->
+	<script src="assets/js/theme.bundle.js"></script>
+
+	<!-- Particles -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+	<script>
+		particlesJS('particles-js', {
+			particles: {
+				number: {
+					value: 100,
+					density: {
+						enable: true,
+						value_area: 800
+					}
+				},
+				color: {
+					value: '#ffffff'
+				},
+				shape: {
+					type: 'circle'
+				},
+				opacity: {
+					value: 0.5,
+					random: false
+				},
+				size: {
+					value: 3,
+					random: true
+				},
+				line_linked: {
+					enable: true,
+					distance: 150,
+					color: '#ffffff',
+					opacity: 0.4,
+					width: 1
+				},
+				move: {
+					enable: true,
+					speed: 2,
+					direction: 'none',
+					random: true,
+					straight: false,
+					out_mode: 'out',
+					bounce: true
+				}
+			},
+			interactivity: {
+				detect_on: 'canvas',
+				events: {
+					onhover: {
+						enable: true,
+						mode: 'repulse'
+					},
+					onclick: {
+						enable: true,
+						mode: 'push'
+					},
+					resize: true
+				}
+			},
+			retina_detect: true
+		});
+
+	</script>
+
+	<!-- Smoothscrolling -->
+	<script>
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function(e) {
+				e.preventDefault();
+
+				const targetElement = document.querySelector(this.getAttribute('href'));
+				const targetPosition = targetElement.getBoundingClientRect().top;
+				const startPosition = window.pageYOffset;
+				const distance = targetPosition;
+				const duration = 3000; // Adjust this value to control scroll speed (in milliseconds)
+				let startTime = null;
+
+				function animation(currentTime) {
+					if (startTime === null) startTime = currentTime;
+					const timeElapsed = currentTime - startTime;
+					const run = ease(timeElapsed, startPosition, distance, duration);
+					window.scrollTo(0, run);
+					if (timeElapsed < duration) requestAnimationFrame(animation);
+				}
+
+				function ease(t, b, c, d) {
+					t /= d / 2;
+					if (t < 1) return c / 2 * t * t + b;
+					t--;
+					return -c / 2 * (t * (t - 2) - 1) + b;
+				}
+
+				requestAnimationFrame(animation);
+			});
+		});
+
+	</script>
+
+	<!-- Counter -->
+	<script>
+		const counter1 = new CountUp('counter1', 100);
+		const counter2 = new CountUp('counter2', 24);
+		const counter3 = new CountUp('counter3', 147);
+
+		// Start the counters when the DOM is ready
+		window.onload = function() {
+			counter1.start();
+			counter2.start();
+			counter3.start();
+		}
+
+	</script>
+
+	<!-- Copywrite Year -->
+	<script>
+		document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+	</script>
+
+	<!-- Contact Form jQuery (for AJAX) -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<script>
+		// Handle form submission via AJAX
+		$("#contactForm").on("submit", function(event) {
+			event.preventDefault(); // Prevent the default form submission
+
+			// Clear previous alerts
+			$("#alert-placeholder").html("");
+
+			// Serialize form data
+			var formData = $(this).serialize();
+
+			// Send AJAX request to server-side script
+			$.ajax({
+				url: "submit.php", // PHP file to handle form submission
+				type: "POST",
+				data: formData,
+				success: function(response) {
+					// Check for a successful response and display success alert
+					$("#alert-placeholder").html('<div class="alert alert-success alert-dismissible fade show" role="alert">' +
+						'Your message has been successfully sent.' +
+						'<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' +
+						'</div>');
+
+					// Clear form fields after successful submission
+					$("#contactForm")[0].reset();
+				},
+				error: function() {
+					// If there's an error, show the error alert
+					$("#alert-placeholder").html('<div class="alert alert-danger alert-dismissible fade show" role="alert">' +
+						'There was an error sending your message. Please try again later.' +
+						'<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' +
+						'</div>');
+				}
+			});
+		});
+
+	</script>
+
+	<script src="./contact-form.js"></script>
+	
+	
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Variables
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    // Function to toggle active class on scroll
+    function activateLink() {
+        let currentPosition = window.scrollY;
+
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 80; // Offset for navbar height
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+
+            // Check if the current scroll position is within the section
+            if (currentPosition >= sectionTop && currentPosition < sectionTop + sectionHeight) {
+                // Loop through all nav links and remove the 'active' class
+                navLinks.forEach((link) => {
+                    link.classList.remove('active'); // Remove 'active' from all links
+
+                    // Add 'active' class to the nav link that corresponds to the current section
+                    if (link.getAttribute('href') === `#${sectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }
+
+    // Function to activate links on scroll
+    window.addEventListener('scroll', function () {
+        activateLink(); // Call function to update active links on scroll
+    });
+});
+</script>
+
+<script>
+	// Add this script after your Bootstrap JS inclusion
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all nav links
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    // Get the navbar toggler and collapse element
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    // Add click event listener to each nav link
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Check if the navbar is expanded (visible on mobile)
+            if (navbarCollapse.classList.contains('show')) {
+                // Programmatically click the toggler to close the menu
+                navbarToggler.click();
+            }
+        });
+    });
+});
+	</script>
+</body>
+
+</html>
