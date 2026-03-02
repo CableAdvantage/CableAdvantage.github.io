@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Results - ComputerHub</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .product-Card {
+        border-radius: 10px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      }
+      .product-Title {
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      .product-Spec {
+        font-size: 0.85rem;
+      }
+      .product-Button {
+        width: 100%;
+      }
+      .back-btn {
+        margin-top: 1rem;
+        display: inline-block;
+        background-color: #6c757d;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+      .back-btn:hover {
+        background-color: #5a6268;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-dark text-white py-2">
+      <div class="container">
+        <h1 class="h3 mb-0">ComputerHub</h1>
+      </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html"
+                >Cart <span id="cart-badge" class="badge bg-success">0</span></a
+              >
+            </li>
+          </ul>
+          <form class="d-flex" onsubmit="redirectToSearch(event)">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              id="mainSearch"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container py-4">
+      <a href="javascript:history.back()" class="back-btn">← Back</a>
+      <h2 class="mb-4">Search Results</h2>
+      <div id="searchResultsContainer" class="row"></div>
+    </div>
+
+    <footer class="bg-dark text-white py-3 mt-5">
+      <div class="container text-center">
+        <p class="mb-0">&copy; 2025 ComputerHub. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      function getQueryParam(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name) || "";
+      }
+
+      function renderSearchResults(container, products) {
+        products.forEach((product) => {
+          const col = document.createElement("div");
+          col.className = "col-md-3 col-sm-6 mb-4";
+
+          const card = document.createElement("div");
+          card.className = "card product-Card h-100";
+
+          const img = document.createElement("img");
+          img.className = "card-img-top";
+          img.src = product.image;
+          img.alt = product.name;
+
+          const body = document.createElement("div");
+          body.className = "card-body";
+
+          const title = document.createElement("h4");
+          title.className = "card-title product-Title";
+          title.innerText = `${product.name} - R${product.price}`;
+
+          const specList = document.createElement("ul");
+          product.specs.forEach((spec) => {
+            const li = document.createElement("li");
+            li.className = "product-Spec";
+            li.textContent = spec;
+            specList.appendChild(li);
+          });
+
+          const button = document.createElement("button");
+          button.className = "btn btn-success product-Button mt-2";
+          button.innerText = "Add to Cart";
+          button.addEventListener("click", () => {
+            addToCart(product);
+          });
+
+          body.appendChild(title);
+          body.appendChild(specList);
+          body.appendChild(button);
+
+          card.appendChild(img);
+          card.appendChild(body);
+          col.appendChild(card);
+          container.appendChild(col);
+        });
+      }
+
+      function addToCart(product) {
+        let cart = JSON.parse(localStorage.getItem("computerhub_cart")) || [];
+        const existing = cart.find((item) => item.id === product.id);
+
+        if (existing) {
+          existing.qty += 1;
+        } else {
+          cart.push({ ...product, qty: 1 });
+        }
+
+        localStorage.setItem("computerhub_cart", JSON.stringify(cart));
+        updateCartBadge();
+      }
+
+      function updateCartBadge() {
+        const cart = JSON.parse(localStorage.getItem("computerhub_cart")) || [];
+        const count = cart.reduce((sum, item) => sum + item.qty, 0);
+        const badge = document.getElementById("cart-badge");
+        if (badge) {
+          badge.textContent = count;
+          badge.style.display = count > 0 ? "inline-block" : "none";
+        }
+      }
+
+      // Redirect search bar (navbar) to this page
+      function redirectToSearch(e) {
+        e.preventDefault();
+        const input = document.getElementById("mainSearch");
+        const query = input.value.trim();
+        if (query) {
+          window.location.href = `search-results.html?query=${encodeURIComponent(
+            query
+          )}`;
+        }
+      }
+
+      // Search and render
+      window.addEventListener("DOMContentLoaded", () => {
+        updateCartBadge();
+        const query = getQueryParam("query").toLowerCase().trim();
+        const container = document.getElementById("searchResultsContainer");
+
+        fetch("data/products.json")
+          .then((res) => res.json())
+          .then((products) => {
+            const filtered = products.filter((product) => {
+              const hasName = typeof product.name === "string";
+              const hasSpecs = Array.isArray(product.specs);
+              const hasCategory = typeof product.category === "string";
+
+              return (
+                (hasName && product.name.toLowerCase().includes(query)) ||
+                (hasSpecs &&
+                  product.specs.some((spec) =>
+                    spec.toLowerCase().includes(query)
+                  )) ||
+                (hasCategory && product.category.toLowerCase().includes(query))
+              );
+            });
+
+            if (filtered.length === 0) {
+              container.innerHTML = "<p>No products found.</p>";
+            } else {
+              renderSearchResults(container, filtered);
+            }
+          });
+      });
+    </script>
+  </body>
+</html>
