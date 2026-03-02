@@ -1,0 +1,739 @@
+#cart-count {
+  font-size: 0.75rem;
+  padding: 4px 6px;
+}
+
+/* Preloader full screen overlay */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Spinner animation */
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid rgba(210, 255, 47, 0.845);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Fade-in base */
+.fade-in {
+  opacity: 0;
+  transition: opacity 700ms cubic-bezier(.16,1,.3,1), transform 700ms cubic-bezier(.16,1,.3,1);
+  will-change: opacity, transform;
+}
+
+/* initial states (only when NOT visible) */
+.fade-in.fade-in-left:not(.visible)  { transform: translateX(-40px); }
+.fade-in.fade-in-right:not(.visible) { transform: translateX(40px); }
+.fade-in.fade-in-up:not(.visible)    { transform: translateY(40px); }
+.fade-in.fade-in-down:not(.visible)  { transform: translateY(-40px); }
+.fade-in.fade-in-zoom:not(.visible)  { transform: scale(0.92); }
+
+/* visible state (clears transforms) */
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { transition: none !important; transform: none !important; opacity: 1 !important; }
+}
+
+
+/* General Layout */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding-top: 40px;
+  height: 100%;
+}
+
+body {
+  background-size: cover;
+  background-color: #ebffd47f;
+  background-image: url('../background/backgroundGrey.jpg');
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* Background fade container */
+#background-container {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.bg-image.active {
+  opacity: 1;
+}
+
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.background {
+    height: 100vh; /* full screen */
+    width: 100%;
+}
+
+.hero-section {
+  height: 100vh;
+  background: url('../background/pcBuild.jpg') no-repeat center center/cover;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay for text readability */
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+.search-input::placeholder {
+  text-align: center;
+}
+.search-input {
+  text-align: center;
+}
+
+/* Limit mobile card height */
+@media (max-width: 767.98px) {
+  #multiCardCarousel .card {
+    height: auto !important;
+  }
+
+  #multiCardCarousel .card-img-top {
+    height: 100px;
+    object-fit: cover;
+  }
+}
+
+/* Desktop height constraint */
+@media (min-width: 768px) {
+  #multiCardCarousel.carousel-desktop-height {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1600px) {
+    #multiCardCarousel {
+        margin-bottom: 4rem; /* More space on ultra-wide screens */
+    }
+}
+
+
+#multiCardCarousel .card {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 767.98px) {
+  #multiCardCarousel .card-img-top {
+    height: 250px;
+    object-fit: cover;
+  }
+}
+
+/* .main-logo {
+  text-align: center;
+  border-radius: 10px;
+  background-image: url('../images/bodyBG.jpg');
+} */
+
+/* .logo {
+  height: 150px;
+  border-radius: 20px;
+  padding: 10px;
+} */
+
+.logo {
+  height: 70px;
+  border-radius: 10px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: black;
+}
+
+.navbar-collapse {
+  background-color: black;
+}
+
+.navbar-toggler {
+  border-color: rgba(210, 255, 47, 0.845);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(210, 255, 47, 0.845)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/ %3E%3C/svg%3E");
+}
+
+.nav-link {
+  color: rgba(172, 198, 30);
+}
+
+.nav-link:hover {
+  color: rgb(160, 160, 160);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar.fixed-top {
+  background-color: black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1030;
+}
+
+@media (max-width: 767.98px) {
+  .navbar .search-bar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar .search-bar input {
+    width: 75%;
+  }
+}
+
+.card {
+  height: 100%;
+}
+.carousel .card {
+  margin: 10px;
+}
+
+#multiCardCarousel {
+  margin-top: 10px;
+}
+
+/* Shrink card height and text for mobile */
+@media (max-width: 767.98px) {
+  .carousel .card {
+    font-size: 0.9rem;
+  }
+
+  .carousel .card-img-top {
+    height: 120px;
+    object-fit: cover;
+  }
+
+  .carousel .card-body {
+    padding: 0.5rem;
+  }
+
+  .carousel .card-title {
+    font-size: 1rem;
+  }
+}
+.carousel-control-prev {
+  color: black;
+}
+/* Footer */
+.footer {
+  background-color: black;
+  color: white;
+  padding: 20px 10px;
+  margin-top: 20px;
+}
+
+.address,
+.contact-us,
+.quick-links {
+  text-align: center;
+  color: rgba(172, 198, 30);
+}
+
+/* Links */
+a:link,
+a:visited {
+  color: rgba(172, 198, 30);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(160, 160, 160);
+}
+
+/* Card Styling */
+.card {
+  margin: 10px;
+}
+
+.card-title,
+.hero-text,
+.collab-Text {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 0 auto;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+/* Custom Cards */
+.custom-card-1 {
+  background-image: url('../images/laptopRefurb.jpg');
+}
+
+.custom-card-2 {
+  background-image: url('../images/gamingSetup2.jpg');
+}
+
+.custom-card-3 {
+  background-image: url('../images/networking.jpg');
+}
+
+.custom-card-4 {
+  background-image: url('../images/keyboard.jpg');
+}
+
+.custom-card-1,
+.custom-card-2,
+.custom-card-3,
+.custom-card-4,
+.custom-card-5 {
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: rgba(172, 198, 30);
+  font-weight: bold;
+  border-radius: 8px;
+  display: flex;
+  height: 90%;
+}
+
+
+/* Product Cards */
+.product-Card {
+  background: linear-gradient(rgba(241, 239, 233), rgb(184, 184, 184));
+  color: rgba(172, 198, 30);
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+}
+
+.product-Button {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.product-Title {
+  font-size: 18px;
+}
+
+.product-Spec,
+.product-Price {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+/* Sections */
+.philosophy,
+.whatWeDo,
+.collab,
+.clients,
+.aboutUs,
+.catalogue,
+.description,
+.location {
+  position: relative;
+  padding: 10px 0;
+  background-size: cover;
+  background-position: center;
+  background-color: transparent;
+  border-radius: 20px;
+  color: rgba(172, 198, 30);
+  text-align: center;
+  margin-top: 10px;
+}
+
+h4 {
+  /* color: rgba(172, 198, 30); */
+  color: black;
+  font-weight: bold;
+  /* text-decoration: underline;  */
+}
+
+.philoText,
+.collab-Text,
+.aboutUsText,
+.catText,
+.locationText {
+  color: black;
+  
+}
+
+.intro {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  /* color: white; */
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.products {
+  position: relative;
+  padding: 20px 0;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  /* color: white; */
+  text-align: center;
+  margin-top: 20px;
+  /* margin-bottom: 20px; */
+}
+
+.products {
+  /* background-image: url('../images/shopping3.jpg'); */
+  color: rgba(172, 198, 30);
+}
+
+/* Forms */
+.formGroup {
+  background-color: black;
+  color: white;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
+.contactInfo {
+  color: rgba(172, 198, 30);
+  font-size: 14px;
+}
+
+.footer-Headings {
+  color: white;
+}
+
+i {
+  color: white;
+}
+
+.map {
+  padding: 20px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    width: 100% !important;
+    margin: 10px auto;
+  }
+
+  .logo {
+    height: 100px;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .product-Card img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.custom-carousel {
+  margin-top: 20px;
+}
+
+/* Base carousel image height (mobile first) */
+.custom-carousel .custom-Image {
+  height: 250px;
+  background-size: cover;
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) {
+  .custom-carousel .custom-Image {
+    height: 350px;
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 992px) {
+  .custom-carousel .custom-Image {
+    height: 500px;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 1200px) {
+  .custom-carousel .custom-Image {
+    height: 450px;
+  }
+}
+
+.cart {
+  color: black;
+  background-image: linear-gradient(rgba(241, 239, 233), rgb(184, 184, 184));
+  border-radius: 10px;
+}
+
+/* Wrapper for positioning */
+/* Wrapper for positioning */
+.whatsapp-wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Tooltip text */
+.whatsapp-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  width: 120px;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 8px;
+  position: absolute;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Show tooltip on hover */
+.whatsapp-chat:hover .whatsapp-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Compact WhatsApp Floating Chat Button */
+.whatsapp-chat {
+  width: 48px;
+  height: 48px;
+  background-color: #25D366;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.whatsapp-chat img {
+  width: 26px;
+  height: 26px;
+}
+
+.whatsapp-chat:hover {
+  transform: scale(1.05);
+}
+
+ul {
+  color: black;
+}
+
+.cart-Total {
+  color: black;
+}
+
+.footer .row > div {
+  text-align: center;
+}
+
+.footer-Headings {
+  margin-bottom: 15px;
+}
+
+.footer .contactInfo p {
+  margin-bottom: 10px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+#searchResultsContainer .card {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 576px) {
+  #searchResultsContainer .card-title {
+    font-size: 1rem;
+  }
+
+  #searchResultsContainer li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal-dialog {
+    margin: 0;
+    max-width: 100%;
+    height: 100%;
+  }
+  .modal-content {
+    height: 100%;
+    border-radius: 0;
+  }
+  .modal-body {
+    overflow-y: auto;
+  }
+}
+
+/* Search bar with icon inside */
+.search-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 40px 10px 15px; /* space for icon */
+  border-radius: 25px;
+  font-size: 16px;
+}
+
+/* search icon inside */
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  cursor: pointer;
+}
+
+/* WhatsApp & Cart icons side by side on small screens */
+.navbar-nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Search bar responsive sizes */
+@media (max-width: 768px) {
+  .search-input {
+    font-size: 14px;
+    padding: 8px 35px 8px 12px;
+  }
+}
+
+@media (min-width: 992px) {
+  .search-input {
+    font-size: 18px;
+    padding: 12px 45px 12px 15px;
+  }
+}
+
+/* On large screens, keep logo as normal link */
+@media (max-width: 992px) {
+  .navbar-logo {
+    pointer-events: auto; /* clickable as link */
+  }
+}
+
+/* On small screens, make logo act as toggler only */
+@media (min-width: 991px) {
+  .navbar-logo {
+    cursor: pointer;
+  }
+  .navbar-logo[href] {
+    pointer-events: none; /* prevent going to index.html */
+  }
+}
+
+.services {
+  text-align: left;
+}
+
+.product-Card {
+  display: flex;
+  flex-direction: column;
+  padding-top: auto;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* .card-body .product-Button {
+  margin-top: auto;
+} */
+
+.motto {
+  color: rgba(172, 198, 30);
+  text-align: center;
+}
+
+.copyright {
+  color: rgb(123, 123, 123);
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
