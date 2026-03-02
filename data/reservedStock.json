@@ -1,0 +1,79 @@
+[
+      {
+    "id": "dell-vostro",
+    "name": "Dell Vostro",
+    "price": 3800,
+    "image": "images/dellVostro-removebg-preview.png",
+    "brand": "Dell",
+    "category": "computers",
+    "specs": [
+      "Intel i5-9500 @ 3.00GHz",
+      "16GB RAM",
+      "500GB NVMe SSD",
+      "1TB HDD",
+      "Windows 11 Pro"
+    ]
+  },
+
+  {
+    "id": "dell-XPS9575",
+    "name": "Dell XPS 15 9575",
+    "price": " Request",
+    "image": "images/dellXPS-removebg-preview.png",
+    "brand": "Dell",
+    "category": "laptops",
+    "specs": [
+      "Intel i7-8705G @ 3.1GHz",
+      "16GB RAM",
+      "256GB NVMe SSD",
+      "Radeon RX Vega M GL GPU",
+      "Windows 10 Pro"
+    ]
+  },
+
+  {
+    "id": "dell-5430",
+    "name": "Dell Latitude 5430",
+    "price": " Request",
+    "image": "images/delllatitude-removebg-preview.png",
+    "brand": "Dell",
+    "category": "laptops",
+    "specs": [
+      "Intel Core i7-1265U @ 1.8GHz",
+      "16GB RAM",
+      "256GB NVMe SSD",
+      "Windows 10 Pro"
+    ]
+  },
+
+    {
+    "id": "dell-vostro-15",
+    "name": "Dell Vostro 15",
+    "price": "6000",
+    "image": "images/dellVostroLaptop-removebg-preview.png",
+    "brand": "Dell",
+    "category": "laptops",
+    "specs": [
+      "Intel Core i5-7200U @ 2.70GHz",
+      "16GB RAM",
+      "500GB SSD",
+      "Windows 10 Pro"
+    ]
+  },
+
+    {
+    "id": "dellLatitude5280",
+    "name": "Dell Latitude 5280",
+    "price": 4700,
+    "image": "images/dellLatitude5280-removebg-preview.png",
+    "brand": "Dell",
+    "category": "laptops",
+    "specs": [
+      "Intel i5-7200u @ 2.7GHz",
+      "16GB RAM",
+      "256GB SSD",
+      "Windows 11 Pro"
+    ]
+  }
+
+]

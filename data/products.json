@@ -1,0 +1,1913 @@
+[
+   {
+    "id": "dell-XPS-8thGen",
+    "name": "Dell XPS 15 9575 2-in-1",
+    "price": "12000",
+    "image": "images/DellXPS.png",
+    "brand": "Dell",
+    "category": "laptops",
+    "specs": [
+      "Intel Core i7-8705G",
+      "16GB RAM",
+      "256GB SSD",
+      "Windows 11 Pro"
+    ]
+  },
+
+     {
+    "id": "hpNotebook",
+    "name": "Hp Notebook",
+    "price": "9500",
+    "image": "images/hpNotebook-removebg-preview.png",
+    "brand": "HP",
+    "category": "laptops",
+    "specs": [
+      "Intel Core i5 12th",
+      "8GB RAM",
+      "500GB SSD",
+      "Windows 11 Pro"
+    ]
+  },
+
+  {
+    "id": "lenovo-yoga-520",
+    "name": "Lenovo Yoga 520",
+    "price": "6100",
+    "image": "images/lenovoYoga5207thi5-removebg.png",
+    "brand": "Dell",
+    "category": "laptops",
+    "specs": [
+      "Intel Core i5-7200u",
+      "8GB RAM",
+      "256GB SSD",
+      "Touchscreen",
+      "Windows 11 Pro"
+    ]
+  },
+
+  {
+    "id": "dell-latitude-7480-7thGen",
+    "name": "Dell Latitude 7480",
+    "price": "5800",
+    "image": "images/DellLatitude74807thi5-removebg.png",
+    "brand": "Dell",
+    "category": "laptops",
+    "specs": [
+      "Intel Core i5-7300u",
+      "8GB RAM",
+      "256GB SSD",
+      "Windows 11 Pro"
+    ]
+  },
+
+  {
+    "id": "dell-latitude-7480-6thGen",
+    "name": "Dell Latitude 7480",
+    "price": "5500",
+    "image": "images/dellLatitude74806thi5-removebg.png",
+    "brand": "Dell",
+    "category": "laptops",
+    "specs": [
+      "Intel Core i5-6300u",
+      "8GB RAM",
+      "256GB SSD",
+      "Windows 11 Pro"
+    ]
+  },
+  
+  {
+    "id": "dell-latitude-E7440-4thGen",
+    "name": "Dell Latitude E7440",
+    "price": "4500",
+    "image": "images/DellLatitudeE7440.png",
+    "brand": "Dell",
+    "category": "laptops",
+    "specs": [
+      "Intel Core i7-4600u",
+      "8GB RAM",
+      "512GB SSD",
+      "Windows 10 Pro"
+    ]
+  },
+
+  {
+    "id": "hp-4530s-500gb",
+    "name": "HP ProBook 4530s",
+    "price": 1700,
+    "image": "images/HPProbook-removebg-preview.png",
+    "brand": "HP",
+    "category": "laptops",
+    "specs": [
+      "Intel i3-2350M @ 2.3GHz",
+      "4GB RAM",
+      "500GB HDD",
+      "Windows 10 Pro"
+    ]
+  },
+
+  {
+    "id": "hp-4530s-128ssd",
+    "name": "HP ProBook 4530s",
+    "price": 2300,
+    "image": "images/HPProbook-removebg-preview.png",
+    "brand": "HP",
+    "category": "laptops",
+    "specs": [
+      "Intel i3-2350M @ 2.3GHz",
+      "4GB RAM",
+      "128GB SSD",
+      "Windows 10 Pro"
+    ]
+  },
+
+  {
+    "id": "hp-4530s-500gb",
+    "name": "HP ProBook 4530s",
+    "price": 2500,
+    "image": "images/HPProbook-removebg-preview.png",
+    "brand": "HP",
+    "category": "laptops",
+    "specs": [
+      "Intel i3-2350M @ 2.3GHz",
+      "4GB RAM",
+      "256GB SSD",
+      "Windows 10 Pro"
+    ]
+  },
+
+  {
+    "id": "hp-4530s-500gb",
+    "name": "HP ProBook 4530s",
+    "price": 2800,
+    "image": "images/HPProbook-removebg-preview.png",
+    "brand": "HP",
+    "category": "laptops",
+    "specs": [
+      "Intel i3-2350M @ 2.3GHz",
+      "4GB RAM",
+      "512GB SSD",
+      "Windows 10 Pro"
+    ]
+  },
+
+ {
+    "id": "foam-It",
+    "name": "ComputerHub Foam It",
+    "price": 99,
+    "image": "images/foamIt.png",
+    "brand": "Computerhub",
+    "category": "laptops",
+    "specs": [
+      "Perfect for Cleaning Electronics",
+      "Safe for Screens and Devices",
+      "Includes Free Microfibre Cloth"
+    ]
+  },
+
+  {
+    "id": "apacer-DDR4",
+    "name": "Apacer DDR4 RAM",
+    "price": 650,
+    "image": "images/8GBApacerRAM-removebg-preview.png",
+    "brand": "Apacer",
+    "category": "laptops",
+    "specs": [
+      "8GB",
+      "Up to 3200 MT/s",
+      "SO-DIMM"
+    ]
+  },
+
+  {
+    "id": "13laptopSleeves",
+    "name": "Laptop Sleeves 13\" ",
+    "price": 200,
+    "image": "images/13laptopSleeve-removebg-preview.png",
+    "brand": "Generic",
+    "category": "laptops",
+    "specs": [
+      "Ultra-Slim Profile",
+      "Protective Padding",
+      "Zippered Closure"
+    ]
+  },
+  
+    {
+    "id": "14laptopSleeves",
+    "name": "Laptop Sleeves 14\" ",
+    "price": 225,
+    "image": "images/14laptopSleeve-removebg-preview.png",
+    "brand": "Generic",
+    "category": "laptops",
+    "specs": [
+      "Ultra-Slim Profile",
+      "Protective Padding",
+      "Zippered Closure"
+    ]
+  },
+
+  {
+    "id": "15laptopSleeves",
+    "name": "Laptop Sleeves 15.6\" ",
+    "price": 250,
+    "image": "images/15laptopSleeve-removebg-preview.png",
+    "brand": "Generic",
+    "category": "laptops",
+    "specs": [
+      "Ultra-Slim Profile",
+      "Protective Padding",
+      "Zippered Closure"
+    ]
+  },
+
+  {
+    "id": "laptopBagHardShell",
+    "name": "Laptop Bag",
+    "price": 400,
+    "image": "images/laptopBagHardShell-removebg-preview.png",
+    "brand": "Generic",
+    "category": "laptops",
+    "specs": [
+      "Thick Outer Shell",
+      "Super Durable Design",
+      "Zippered Closure"
+    ]
+  },
+
+      {
+    "id": "laptopBagPowerlandGreenBrown",
+    "name": "Laptop Bag",
+    "price": 300,
+    "image": "images/laptopBagPowerlandGreen-Brown-removebg-preview.png",
+    "brand": "Generic",
+    "category": "laptops",
+    "specs": [
+      "Highly Durable Design",
+      "Spacious",
+      "Zippered Closure"
+    ]
+  },
+
+      {
+    "id": "laptopBagPowerlandLeather",
+    "name": "Laptop Bag",
+    "price": 350,
+    "image": "images/laptopBagPowerlandLeather-removebg-preview.png",
+    "brand": "Generic",
+    "category": "laptops",
+    "specs": [
+      "Highly Durable Design",
+      "Spacious",
+      "Zippered Closure"
+    ]
+  },
+
+      {
+    "id": "laptopBagPowerlandBrown",
+    "name": "Laptop Bag",
+    "price": 300,
+    "image": "images/laptopPowerlandBrown-removebg-preview.png",
+    "brand": "Generic",
+    "category": "laptops",
+    "specs": [
+      "Highly Durable Design",
+      "Spacious",
+      "Zippered Closure"
+    ]
+  },
+
+  {
+    "id": "laptopBagPowerlandBlackGrey",
+    "name": "Laptop Bag",
+    "price": 300,
+    "image": "images/laptopBagPowerlandBlackGrey-removebg-preview.png",
+    "brand": "Generic",
+    "category": "laptops",
+    "specs": [
+      "Highly Durable Design",
+      "Spacious",
+      "Zippered Closure"
+    ]
+  },
+
+  {
+    "id": "LaptopBagPowerlandBlackSmall",
+    "name": "Laptop Bag",
+    "price": 280,
+    "image": "images/LaptopBagPowerlandBlackSmall-removebg-preview.png",
+    "brand": "Generic",
+    "category": "laptops",
+    "specs": [
+      "Highly Durable Design",
+      "Spacious",
+      "Zippered Closure"
+    ]
+  },
+
+  {
+    "id": "laptopBagPowerlandKhakiBrown",
+    "name": "Laptop Bag",
+    "price": 300,
+    "image": "images/laptopBagPowerlandKhakiBrown-removebg-preview.png",
+    "brand": "Generic",
+    "category": "laptops",
+    "specs": [
+      "Highly Durable Design",
+      "Spacious",
+      "Zippered Closure"
+    ]
+  },
+
+  {
+    "id": "laptopBagPowerlandKhaki",
+    "name": "Laptop Bag",
+    "price": 280,
+    "image": "images/laptopBagPowerlandKhaki-removebg-preview.png",
+    "brand": "Generic",
+    "category": "laptops",
+    "specs": [
+      "Highly Durable Design",
+      "Spacious",
+      "Zippered Closure"
+    ]
+  },
+
+  {
+    "id": "laptopBagPowerlandSmallBrown",
+    "name": "Laptop Bag",
+    "price": 280,
+    "image": "images/laptopBagPowerlandSmallBrown-removebg-preview.png",
+    "brand": "Generic",
+    "category": "laptops",
+    "specs": [
+      "Highly Durable Design",
+      "Spacious",
+      "Zippered Closure"
+    ]
+  },
+
+  {
+    "id": "gamdias-Whitegaming-pc",
+    "name": "Gamdias Budget Gaming",
+    "price": 8000,
+    "image": "images/12thWhiteGamingPC-removebg.png",
+    "brand": "Gamdias",
+    "category": "computers",
+    "specs": [
+      "Intel i3-12100f @ 3.30GHz",
+      "Nvidia GT730",
+      "8GB RAM",
+      "256GB NVMe SSD",
+      "Windows 11 Pro"
+    ]
+  },
+
+   {
+    "id": "gamdias-Ryzen5-Pc",
+    "name": "Gamdias Ryzen Gaming PC",
+    "price": 7000,
+    "image": "images/GamdiaRyzenPC.png",
+    "brand": "Gamdias",
+    "category": "computers",
+    "specs": [
+      "AMD Ryzen 5 1600 @3.2GHz",
+      "Nvidia GT640",
+      "8GB RAM",
+      "256GB NVMe SSD",
+      "Windows 11 Pro"
+    ]
+  },
+
+  {
+    "id": "cooletMasterGamingPC",
+    "name": "Coolermaster Gaming PC",
+    "price": 6000,
+    "image": "images/coolerMasterGamingPC-removebg-preview.png",
+    "brand": "Cooler Master",
+    "category": "computers",
+    "specs": [
+      "Ryzen 3 PRO 3200G",
+      "AMD Radeon Vega 8",
+      "8GB RAM",
+      "500GB NVMe SSD",
+      "Windows 11 Pro"
+    ]
+  },
+
+  {
+    "id": "combo-special",
+    "name": "Combo Special",
+    "price": 2600,
+    "image": "images/comboSpecial-removebg-preview.png",
+    "brand": "Mecer",
+    "category": "computers",
+    "specs": [
+      "Mecer Budget Desktop",
+      "22\" Dell Monitor",
+      "Keyboard and Mouse"
+    ]
+  },
+
+  {
+    "id": "mecer-budget",
+    "name": "Mecer Budget Desktop",
+    "price": 800,
+    "image": "images/mecerBudget-removebg-preview.png",
+    "brand": "Mecer",
+    "category": "computers",
+    "specs": [
+      "Intel i3-3220 @ 3.0GHz",
+      "4GB RAM",
+      "250GB HDD",
+      "Windows 10 Pro"
+    ]
+  },
+
+    {
+    "id": "evetech-case",
+    "name": "Evetech Mid-Tower ATX Case",
+    "price": 300,
+    "image": "images/evetechCase-removebg.png",
+    "brand": "Evetech",
+    "category": "computers",
+    "specs": [
+      "Supports ATX and M-ATX Boards",
+      "2 USB 2.0 Ports",
+      "1 USB 3.0 Port"
+    ]
+  },
+
+  {
+    "id": "dell27Inch",
+    "name": "Dell Monitor",
+    "price": 1799,
+    "image": "images/dell27Inch-removebg-preview.png",
+    "brand": "aoc",
+    "category": "computers",
+    "specs": [
+      "27\" Screen",
+      "Large Display",
+      "1920x1080"
+    ]
+  },
+
+  {
+    "id": "dellMonitorNOHDMI",
+    "name": "Dell 22\" Monitor",
+    "price": 1200,
+    "image": "images/dell22inchMonitorNoHDMI-removebg-preview.png",
+    "brand": "aoc",
+    "category": "computers",
+    "specs": [
+      "VGA and DVI",
+      "Clean Design",
+      "1920x1080"
+    ]
+  },
+
+  {
+    "id": "lgMonitor",
+    "name": "LG Monitor",
+    "price": 1200,
+    "image": "images/lgMonitor2-removebg-preview.png",
+    "brand": "lg",
+    "category": "computers",
+    "specs": [
+      "Full HD Display",
+      "Radeon FreeSync",
+      "OnScreen Control"
+    ]
+  },
+
+  {
+    "id": "dellMonitor",
+    "name": "Dell Monitor",
+    "price": 1200,
+    "image": "images/dellMonitor-removebg-preview.png",
+    "brand": "Dell",
+    "category": "computers",
+    "specs": [
+      "22\" Display",
+      "Full HD",
+      "HDMI, VGA and DVI"
+    ]
+  },
+
+  {
+    "id": "corsair-cx650",
+    "name": "Corsair CX650 Powersupply",
+    "price": 1400,
+    "image": "images/corsairPSU-removebg-preview.png",
+    "brand": "Corsair",
+    "category": "computers",
+    "specs": [
+      "650 Watt",
+      "ATX Powersupply",
+      "80 Plus Bronze"
+    ]
+  },
+
+  {
+    "id": "gamdiasHeliosE1-750",
+    "name": "Gamdias Helios E1 750 Powersupply",
+    "price": 1300,
+    "image": "images/GamdiasHeliosE1PSU-removebg.png",
+    "brand": "Gamdias",
+    "category": "computers",
+    "specs": [
+      "750 Watt",
+      "ATX Powersupply",
+      "80 Plus"
+    ]
+  },
+
+    {
+    "id": "atom-v550",
+    "name": "Atom V550 Powersupply",
+    "price": 880,
+    "image": "images/atomV550PSU-removebg-preview.png",
+    "brand": "Corsair",
+    "category": "computers",
+    "specs": [
+      "550 Watt",
+      "ATX Powersupply",
+      "PCIe 6 + 2 Connector"
+    ]
+  },
+
+  {
+    "id": "argbFans",
+    "name": "120mm ARGB Gemini Fans",
+    "price": 550,
+    "image": "images/argbFANS-removebg-preview.png",
+    "brand": "Gemini",
+    "category": "computers",
+    "specs": [
+      "Remote Controller",
+      "Dual RGB Rings",
+      "Hydraulic Bearing"
+    ]
+  },
+
+  {
+    "id": "corsairXTMThermalPaste",
+    "name": "Corsair XTM50 Thermal Paste",
+    "price": 220,
+    "image": "images/corsairXTM50ThermalPaste-removebg-preview.png",
+    "brand": "Corsair",
+    "category": "computers",
+    "specs": [
+      "High-Performance Thermal Paste"
+    ]
+  },
+
+  {
+    "id": "masterGelPRO",
+    "name": "Cooler Master MasterGel Pro",
+    "price": 200,
+    "image": "images/masterGelPRO-removebg-preview.png",
+    "brand": "Cooler Master",
+    "category": "computers",
+    "specs": [
+      "High-Performance Thermal Paste",
+      "Enhanced thermal conductivity",
+      "Ideal for high-performance PCs"
+    ]
+  },
+
+  {
+    "id": "masterGelReg",
+    "name": "Cooler Master MasterGel Regular",
+    "price": 150,
+    "image": "images/masterGelReg-removebg-preview.png",
+    "brand": "Cooler Master",
+    "category": "computers",
+    "specs": [
+      "High-Performance Thermal Paste",
+      "Easy-to-apply",
+      "Provides stable thermal conductivity"
+    ]
+  },
+
+  {
+    "id": "hiksemi-256",
+    "name": "Apacer SSD",
+    "price": 810,
+    "image": "images/apacerSSD-removebg-preview.png",
+    "brand": "Apacer",
+    "category": "computers",
+    "specs": [
+      "2.5\" SATA",
+      "6GB/s Data Transfer",
+      "256GB"
+    ]
+  },
+  {
+    "id": "hiksemi-512",
+    "name": "HikSemi SSD",
+    "price": 1120,
+    "image": "images/hiksemi512GBSSD-removebg-preview.png",
+    "brand": "HikSemi",
+    "category": "computers",
+    "specs": [
+      "2.5\" SATA",
+      "6GB/s Data Transfer",
+      "512GB"
+    ]
+  },
+
+  {
+    "id": "wd-elements-ssd",
+    "name": "WD Elements SSD",
+    "price": 800,
+    "image": "images/wdElementsSSD-removebg-preview.png",
+    "brand": "Western Digital",
+    "category": "computers",
+    "specs": [
+      "2.5\" SATA",
+      "6GB/s Data Transfer",
+      "480GB"
+    ]
+  },
+
+{
+    "id": "hiksemi-1TB",
+    "name": "HikSemi SSD",
+    "price": 1720,
+    "image": "images/hiksemiE1001TB.png",
+    "brand": "HikSemi",
+    "category": "computers",
+    "specs": [
+      "2.5\" SATA",
+      "6GB/s Data Transfer",
+      "1TB"
+    ]
+  },
+
+  {
+    "id": "tplink-archer-t3u",
+    "name": "TP-Link Archer T3U Plus",
+    "price": 450,
+    "image": "images/tpLinkArcher-removebg-preview.png",
+    "brand": "TP-Link",
+    "category": "network-tools",
+    "specs": [
+      "High-Gain - Boost Wireless Range",
+      "867 Mbps on 5GHz / 400 Mbps on 2.4GHz",
+      "USB 3.0",
+      "MU-MIMO"
+    ]
+  },
+
+  {
+    "id": "cat6100m",
+    "name": "100m CAT 6 Cable",
+    "price": 390,
+    "image": "images/CAT6Cable.png",
+    "brand": "Scoop",
+    "category": "network-tools",
+    "specs": [
+      "Improved Noise Reduction",
+      "10Gbps up to 55 meters",
+      "1Gbps up to 100 meters"
+    ]
+  },
+
+   {
+    "id": "cat5E100m",
+    "name": "100m CAT 5e Cable",
+    "price": 330,
+    "image": "images/CAT5ECable.png",
+    "brand": "Scoop",
+    "category": "network-tools",
+    "specs": [
+      "Supports PoE",
+      "1Gbps up to 100 meters",
+      "Indoor Cabling and Voice Cabling",
+      "Perfect for IP Cameras"
+    ]
+  },
+
+  {
+    "id": "mercuSysRouter",
+    "name": "Mercusys MR30G Router",
+    "price": 600,
+    "image": "images/mercusysRouter-removebg-preview.png",
+    "brand": "TP-Link",
+    "category": "network-tools",
+    "specs": [
+      "Dual-Band Wifi",
+      "Full Gigabit Ports",
+      "MU-MIMO Technology",
+      "IPTV and IPv6 Supported",
+      "Easy App Control"
+    ]
+  },
+
+  {
+    "id": "tplink-switch-5-port",
+    "name": "TP-Link Desktop Switch",
+    "price": 399,
+    "image": "images/5PortSwitch-removebg-preview.png",
+    "brand": "TP-Link",
+    "category": "network-tools",
+    "specs": [
+      "5-Port Gigabit",
+      "Plug & Play",
+      "Traffic Prioritization",
+      "Auto MDI/MDIX",
+      "Green Tech"
+    ]
+  },
+
+  {
+    "id": "cudy8PortGigabitSwitch",
+    "name": "Cudy 8 Port Gigabit Switch",
+    "price": 420,
+    "image": "images/cudy8PortGigabitSwitch-removebg-preview.png",
+    "brand": "Cudy",
+    "category": "network-tools",
+    "specs": [
+      "8-Port Gigabit",
+      "Plug & Play",
+      "IGMP Snooping and Loop Prevention",
+      "10/100/1000 Mbps Auto Negotian",
+      "Plug and Play"
+    ]
+  },
+
+  {
+    "id": "hiLookBulletCamera",
+    "name": "HiLook Turbo HD Bullet Camera",
+    "price": 310,
+    "image": "images/hiLookBulletCamera-removebg-preview.png",
+    "brand": "HiLook",
+    "category": "network-tools",
+    "specs": [
+      "HD Video Output",
+      "HDTCI Technology",
+      "IP66 Waterproof",
+      "EXIR Technology"
+    ]
+  },
+
+  {
+    "id": "hiLookTurretCamera",
+    "name": "HiLook Turbo HD Turret Camera",
+    "price": 300,
+    "image": "images/hiLookTurretCamera-removebg-preview.png",
+    "brand": "HiLook",
+    "category": "network-tools",
+    "specs": [
+      "HD Video Output",
+      "HDTCI Technology",
+      "Easy Installation",
+      "EXIR Technology"
+    ]
+  },
+
+  {
+    "id": "hikVisionPSU",
+    "name": "HikVision 8 Channel Power Supply",
+    "price": 350,
+    "image": "images/hikVision8ChannelPSU-removebg-preview.png",
+    "brand": "HikVision",
+    "category": "network-tools",
+    "specs": [
+      "Switching Power Supply",
+      "150-285 VAC Input",
+      "47-63Hz 1A Max",
+      "12VDC 5A"
+    ]
+  },
+
+    {
+    "id": "junctionBox",
+    "name": "Junction Box",
+    "price": 40,
+    "image": "images/junctionBox-removebg-preview.png",
+    "brand": "generic",
+    "category": "network-tools",
+    "specs": [
+      "Durable Junction Box",
+      "Multi-Entry Design",
+      "Secure Enclosure",
+      "Easy Installation"
+    ]
+  },
+
+  {
+    "id": "rj45-connectors",
+    "name": "RJ45 Connectors",
+    "price": 130,
+    "image": "images/rj45connectors-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "100 Pack",
+      "UTP CAT 6"
+    ]
+  },
+
+  {
+    "id": "rj45-boots",
+    "name": "RJ45 Boots",
+    "price": 60,
+    "image": "images/Rj45boots-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "100 Pack"
+    ]
+  },
+  
+  {
+    "id": "sideCutters",
+    "name": "Bebona Side Cutter",
+    "price": 100,
+    "image": "images/sideCutters-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "Chrome Vanadium",
+      "200mm",
+      "Precision Machined",
+      "Non-Slip Ergonomic Handle Grips"
+    ]
+  },
+
+    {
+    "id": "6PCInsulatedScrewdrivers",
+    "name": "6 Piece Insulated Screwdriver Set",
+    "price": 250,
+    "image": "images/6PCInsulatedScrewdrivers-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "Magnetic Tips",
+      "Ergonomic Anti-Slip Handles",
+      "Ideal for DIY and Professional Use",
+      "Slotted Phillips"
+    ]
+  },
+
+  {
+    "id": "9PChexKeySet",
+    "name": "9 Piece Hex Key Set",
+    "price": 100,
+    "image": "images/9pcHexKeySet-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "Highly Durable",
+      "Stainless Steel",
+      "Chamfered Ball Point Heads"
+    ]
+  },
+
+  {
+    "id": "aiyiWireStripper",
+    "name": "Aiyi Wire Stripper",
+    "price": 100,
+    "image": "images/aiyiWireStrippers-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "Highly Durable",
+      "2 in 1 Tool",
+      "Ergonomic Handles"
+    ]
+  },
+
+    {
+    "id": "5PCPlierSet",
+    "name": "5 Piece Mini Plier Set",
+    "price": 130,
+    "image": "images/5pcPlierSet-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "Spring Loaded Hinge",
+      "Ergonomic Anti-Slip Handles",
+      "Drop Forged, Heat Treated Steel",
+      "Precision-Machined Jaws"
+    ]
+  },
+
+    {
+    "id": "aiyi5PCdrillBits",
+    "name": "5 Piece Concrete Drill Bit Set",
+    "price": 120,
+    "image": "images/aiyiDrillBits-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "High-Performance Design",
+      "Durable Construction",
+      "Precision Drilling",
+      "SDS Plus Shank"
+    ]
+  },
+
+    {
+    "id": "clawHammer",
+    "name": "Claw Hammer",
+    "price": 80,
+    "image": "images/clawHammer-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "Versatile Claw Hammer",
+      "Durable Steel Head",
+      "Anti-Slip Handle",
+      "Reliable & Sturdy"
+    ]
+  },
+
+    {
+    "id": "pipeBender",
+    "name": "PVC Pipe Bender",
+    "price": 100,
+    "image": "images/conduitBender-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "Durable Construction",
+      "Smooth Bends",
+      "Easy to Use",
+      "Reliable Results"
+    ]
+  },
+
+    {
+    "id": "insulatedScrewdriver",
+    "name": "Insulated Screwdriver",
+    "price": 50,
+    "image": "images/insulatedScrewdriver-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "High-Quality Insulation",
+      "Durable Steel Shaft",
+      "Precision Tip",
+      "Comfort Grip Handle"
+    ]
+  },
+
+  {
+    "id": "hellerman-tyton-t18r",
+    "name": "HellermanTyton T18R",
+    "price": 20,
+    "image": "images/T18R-removebg-preview.png",
+    "brand": "HellermanTyton",
+    "category": "network-tools",
+    "specs": [
+      "Cable Ties",
+      "T18R",
+      "100 Pack"
+    ]
+  },
+
+  {
+    "id": "hellerman-tyton-t30r",
+    "name": "HellermanTyton T30R",
+    "price": 30,
+    "image": "images/T30R-removebg-preview.png",
+    "brand": "HellermanTyton",
+    "category": "network-tools",
+    "specs": [
+      "Cable Ties",
+      "T30R",
+      "100 Pack"
+    ]
+  },
+
+  {
+    "id": "hellerman-tyton-t50r",
+    "name": "HellermanTyton T50R",
+    "price": 50,
+    "image": "images/T50R-removebg-preview.png",
+    "brand": "HellermanTyton",
+    "category": "network-tools",
+    "specs": [
+      "Cable Ties",
+      "T50R (White)",
+      "100 Pack"
+    ]
+  },
+
+  {
+    "id": "insulationTape",
+    "name": "Insulation Tape",
+    "price": 35,
+    "image": "images/insulationTape-removebg-preview.png",
+    "brand": "generic",
+    "category": "network-tools",
+    "specs": [
+      "High Quality",
+      "Multiple Uses",
+      "Available in Black or White"
+    ]
+  },
+
+  {
+    "id": "solderWire",
+    "name": "Solder Wire",
+    "price": 100,
+    "image": "images/solderWire-removebg-preview.png",
+    "brand": "generic",
+    "category": "network-tools",
+    "specs": [
+      "Type C Active Solder Wire",
+      "1.0mm Diameter",
+      "Sn63%"
+    ]
+  },
+
+  {
+    "id": "miniFlashlight",
+    "name": "6 Piece Insulated Screwdriver Set",
+    "price": 40,
+    "image": "images/miniFlashLight-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "One Click Switch",
+      "Long Lasting Battery Life",
+      "Type C Rechargeable",
+      "Clip On Back"
+    ]
+  },
+
+  {
+    "id": "ethernet-cable",
+    "name": "Ethernet Cable",
+    "price": 50,
+    "image": "images/ethernetCable-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "3 Meter",
+      "UTP CAT 6"
+    ]
+  },
+
+  {
+    "id":"scFiberCable",
+    "name": "SC Fiber Optic Cable",
+    "price": 100,
+    "image": "images/SCFiberCable-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "SC to SC Connector",
+      "UPC",
+      "Low Insertion Loss"
+    ]
+  },
+
+  {
+    "id":"5mFiberCable",
+    "name": "5m Fiber Optic Cable",
+    "price": 150,
+    "image": "images/5mFibreOptic-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "SC to LC Connector",
+      "UPC",
+      "Low Insertion Loss"
+    ]
+  },
+
+  {
+    "id":"10mFiberCable",
+    "name": "5m Fiber Optic Cable",
+    "price": 150,
+    "image": "images/10mFibreOptic-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "SC to LC Connector",
+      "UPC",
+      "Low Insertion Loss"
+    ]
+  },
+
+  {
+    "id": "bisutime-toolkit",
+    "name": "Bisutime 115 in 1 Toolset",
+    "price": 250,
+    "image": "images/bisutimeToolKit-removebg-preview.png",
+    "brand": "Bisutime",
+    "category": "network-tools",
+    "specs": [
+      "Multi-function",
+      "Watch, Phone and Computers",
+      "Chrome Vanadium"
+    ]
+  },
+
+  {
+    "id": "cable-installation-kit",
+    "name": "Cable Installation Kit",
+    "price": 250,
+    "image": "images/cableInstallKit-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "RJ11, RJ45 and Coax Crimpers",
+      "Cable Tester",
+      "Punchdown Tool",
+      "Cable Stripper",
+      "Coax Stipper",
+      "RJ45 Connectors"
+    ]
+  },
+
+  {
+    "id": "install-kit",
+    "name": "Installation Kit",
+    "price": 200,
+    "image": "images/installKit-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "RJ11, RJ45 and Coax Crimpers",
+      "Cable Tester",
+      "Cable Stripper",
+      "Coax Stipper"
+    ]
+  },
+
+   {
+    "id": "digitalMultimeter",
+    "name": "Digital Multimeter",
+    "price": 180,
+    "image": "images/digitalMultimeter-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "Data Hold",
+      "Large LCD Display",
+      "Auto Zero Function",
+      "Single 32 Position Switch for Function and Range"
+    ]
+  },
+
+  {
+    "id": "network-cable-tester",
+    "name": "Network Cable Tester",
+    "price": 80,
+    "image": "images/cableTester-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "RJ11 and RJ45",
+      "Quickly and Easily Check Network Cables",
+      "Checks Open and Short Terminals, Straight or Crossover Wiring Types"
+    ]
+  },
+
+  {
+    "id": "typec-to-rj45",
+    "name": "Type-C to RJ45 LAN Adapter",
+    "price": 150,
+    "image": "images/typeCtoRJ45-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "Supports Up to 1000 Mbps",
+      "Type-C 3.1 Interface",
+      "Supports Full and Half Duplex",
+      "Plug and Play"
+    ]
+  },
+
+  {
+    "id": "induction-headlamp",
+    "name": "Induction Headlamp",
+    "price": 100,
+    "image": "images/inductionHeadlamp-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "350 Lumens",
+      "Up to 8 Hours",
+      "USB Rechargeable",
+      "Wave Induction"
+    ]
+  },
+  
+  {
+    "id": "usb-wireless-adapter",
+    "name": "USB Wireless Adapter",
+    "price": 99,
+    "image": "images/usbWirelessAdpater-removebg-preview.png",
+    "brand": "Generic",
+    "category": "network-tools",
+    "specs": [
+      "USB 2.0",
+      "300Mbps",
+      "802.11b/g/n"
+    ]
+  },
+
+{
+    "id": "foam-It",
+    "name": "ComputerHub Foam It",
+    "price": 99,
+    "image": "images/foamIt.png",
+    "brand": "Computerhub",
+    "category": "accessories",
+    "specs": [
+      "Perfect for Cleaning Electronics",
+      "Safe for Screens and Devices",
+      "Includes Free Microfibre Cloth"
+    ]
+  },
+
+   {
+    "id": "typecToHub",
+    "name": "Type-C to Hub",
+    "price": 290,
+    "image": "images/typeCtoHub-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "Supports 4K",
+      "PD",
+      "HDMI",
+      "VGA",
+      "USB"
+    ]
+  },
+
+ {
+    "id": "typeCHub",
+    "name": "Type-C Hub",
+    "price": 270,
+    "image": "images/typeCUsbHub-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "USB 3.1",
+      "With Power Delivery",
+      "USB-A Ports",
+      "Supports Up to 5Gbps Data Transfer"
+    ]
+  },
+
+{
+    "id": "miniBTKeyboard",
+    "name": "Mini Bluetooth Keyboard",
+    "price": 100,
+    "image": "images/miniBTKeyboard-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "Bluetooth and 2.4G Wireless",
+      "Compatible with PC, Laptop, Playstation and Xbox"
+     
+    ]
+  },
+  
+{
+    "id": "tabletKeyboard",
+    "name": "Wireless Tablet Keyboard",
+    "price": 100,
+    "image": "images/tabletKeyboard-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "Bluetooth Connectivity",
+      "USB Rechargeable",
+      "Up to 6 Hours Battery Life"
+    ]
+  },
+
+{
+    "id": "aoasGamingKeyboard",
+    "name": "AOAS Gaming Keyboard",
+    "price": 120,
+    "image": "images/aoasGamingKeyboard-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "RGB Lighting",
+      "1.5m USB Cable",
+      "Non-Slip Design",
+      "Support for Multiple Systems"
+    ]
+  },
+
+{
+    "id": "aoasKeyboardAndMouseSet",
+    "name": "AOAS Keyboard and Mouse Set",
+    "price": 150,
+    "image": "images/mouseKeyboardSet-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "Durable and Non-Slip",
+      "Multilingual System Support",
+      "USB Plug and Play"
+    ]
+  },
+
+ {
+    "id": "gamdiasHermesE2",
+    "name": "Gamdias Hermes E2 Gaming Keyboard",
+    "price": 550,
+    "image": "images/gamdiasHermesE2-removebg.png",
+    "brand": "Gamdias",
+    "category": "accessories",
+    "specs": [
+      "Backlight",
+      "Mechanical Keyboard",
+      "Neon Lighting Spectrum",
+      "Anti Slip Design"
+    ]
+  },  
+
+   {
+    "id": "gamdiasHermesE3",
+    "name": "Gamdias Hermes E3 Gaming Keyboard",
+    "price": 500,
+    "image": "images/gamdiasHermesE3.png",
+    "brand": "Gamdias",
+    "category": "accessories",
+    "specs": [
+      "Backlight",
+      "Mechanical Keyboard",
+      "Neon Lighting Spectrum",
+      "Anti Slip Design"
+    ]
+  },  
+
+
+  {
+    "id": "coolerMasterMS110KeyMouseSet",
+    "name": "Cooler Master MS110 Keyboard and Mouse Set",
+    "price": 600,
+    "image": "images/coolerMasterMS110KeyMouseSet-removebg-preview.png",
+    "brand": "Cooler Master",
+    "category": "accessories",
+    "specs": [
+      "Durable Mechanical-Feel Keyboard",
+      "RGB Backlighting",
+      "Mouse Equipped with 3200 DPI"
+    ]
+  },   
+  
+{
+    "id": "aoasM1000keyboard",
+    "name": "AOAS M-1000 Gaming Keyboard",
+    "price": 250,
+    "image": "images/aoasM1000keyboard-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "USB Wireless 2.4Ghz",
+      "10m Distance",
+      "Non-Slip Design"
+    ]
+  },   
+
+{
+    "id": "twolfGamingComboSet",
+    "name": "T-Wolf Gaming Combo Set",
+    "price": 320,
+    "image": "images/twolfGamingCombo-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "4 in 1 Gaming Combo",
+      "Ergonomic Design",
+      "Keyboard and Mouse Backlighting",
+      "Includes: Keyboard, Mouse, Headset and a Mousepad"
+    ]
+  },
+
+{
+    "id": "k8GamingMousepad",
+    "name": "K8 Gaming Mouse Pad",
+    "price": 150,
+    "image": "images/k8mousepad-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "High Quality",
+      "Wear Resistant",
+      "Bottom Non-SLip Design",
+      "70cmx30cmx0.3cm"
+    ]
+  },
+
+{
+    "id": "harwaBluetoothSpeaker",
+    "name": "Harwa Bluetooth Speaker",
+    "price": 150,
+    "image": "images/harwaBTspeaker-removebg-preview.png",
+    "brand": "harwa",
+    "category": "accessories",
+    "specs": [
+      "Wireless",
+      "Up to 4 Hours Playtime",
+      "Play from USB Storage Devices",
+      "Splashproof"
+    ]
+  },
+
+{
+    "id": "eccoKaraokeSpeaker",
+    "name": "ECCO Karaoke Speaker",
+    "price": 100,
+    "image": "images/eccoBTSpeaker-removebg-preview.png",
+    "brand": "ecco",
+    "category": "accessories",
+    "specs": [
+      "USB",
+      "FM Radio",
+      "Rechargeable Li Battery",
+      "Output: 3W"
+    ]
+  },
+
+{
+    "id": "iStarPortableSpeaker",
+    "name": "iStar Portable Speaker",
+    "price": 250,
+    "image": "images/iStarBTSpeaker-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "Bluetooth",
+      "USB/TF Card",
+      "Output: 30W",
+      "Rechargeable Battery"
+    ]
+  },
+
+{
+    "id": "aoasS4000GamingMousepad",
+    "name": "AOAS S4000 Gaming Mouse Pad",
+    "price": 200,
+    "image": "images/aoasRGBmousepad-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "RGB",
+      "Non-Slip",
+      "80cmx30cmx0.4cm"
+    ]
+  },
+
+  {
+    "id": "coolerMasterMH630Headset",
+    "name": "Cooler Master MH630 Headset",
+    "price": 500,
+    "image": "images/coolerMasterMH630HeadSet-removebg-preview.png",
+    "brand": "Cooler Master",
+    "category": "accessories",
+    "specs": [
+      "Custom-tuned 50mm neodymium drivers",
+      "Lightweight design",
+      "Detachable omnidirectional boom mic"
+    ]
+  },
+
+{
+    "id": "p880Headset",
+    "name": "P880 RGB Bluetooth Headset",
+    "price": 250,
+    "image": "images/p880-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "Best Pure Bass Sound",
+      "Hands-free Calls and Voice Control",
+      "Lightweight and Foldable Design"
+    ]
+  },
+
+{
+    "id": "p780Headset",
+    "name": "P780 RGB Bluetooth Headset",
+    "price": 250,
+    "image": "images/p780-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "Best Pure Bass Sound",
+      "Hands-free Calls and Voice Control",
+      "Lightweight and Foldable Design"
+    ]
+  },
+
+{
+    "id": "p9Headset",
+    "name": "P9 Bluetooth Headset",
+    "price": 150,
+    "image": "images/p9-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "Wireless Blueooth",
+      "40mm HiFi Dynamic Coil Speakers",
+      "Up to 5 Hours Playtime",
+      "Up to 10m Distance"
+    ]
+  },
+
+  {
+    "id": "gamdiasZeus-M5",
+    "name": "Gamdias Zeus-M5",
+    "price": 200,
+    "image": "images/gamdiasZeusM5-removebg.png",
+    "brand": "Gamdias",
+    "category": "accessories",
+    "specs": [
+      "Wired Gaming Mouse",
+      "Optical",
+      "12800 DPI",
+      "Fully Customizable RGB"
+    ]
+  },
+
+   {
+    "id": "gamdiasHades-M3",
+    "name": "Gamdias Hades-M3",
+    "price": 300,
+    "image": "images/gamdiasHadesM3.png",
+    "brand": "Gamdias",
+    "category": "accessories",
+    "specs": [
+      "Wired/Wireless Gaming Mouse",
+      "Optical",
+      "10000 DPI",
+      "Fully Customizable RGB"
+    ]
+  },
+
+  {
+    "id": "auraGS4",
+    "name": "Aura GS4",
+    "price": 150,
+    "image": "images/AuraGS4-removebg.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "3600 DPI",
+      "Multi-Colour Lighting",
+      "Ergonomic Design",
+      "Optical Gaming Mouse"
+    ]
+  },
+
+{
+    "id": "weiboGlowingMouse",
+    "name": "Weibo Glowing Mouse",
+    "price": 60,
+    "image": "images/weiboGlowingmouse-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "RGB Lighting",
+      "Adjustable DPI",
+      "1600/2400/3200 DPI",
+      "Compatible with Windows, MAC and Linux"
+    ]
+  },
+
+  {
+    "id": "yelanderWiredMouse",
+    "name": "Yelander Optical Wired Mouse",
+    "price": 60,
+    "image": "images/yelanderWiredMouse-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "High Durability",
+      "Up to 3200 DPI",
+      "High Precision",
+      "Compatible with Windows, MAC and Linux"
+    ]
+  }, 
+
+  {
+    "id": "sanDiskUSB64GB",
+    "name": "SanDisk Cruzer Blade 64GB",
+    "price": 110,
+    "image": "images/sanDisk64GBUSB-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "Reliable and Compact",
+      "USB 2.0",
+      "Windows and MAC Compatible"
+    ]
+  },
+
+   {
+    "id": "hiksemiUSB64GB",
+    "name": "HikSemi PULLY 64GB",
+    "price": 110,
+    "image": "images/hiksemi64GBUSB-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "Reliable and Compact",
+      "USB 3.2",
+      "Windows and MAC Compatible"
+    ]
+  },
+
+    {
+    "id": "hiksemiUSB128GB",
+    "name": "HikSemi PULLY 128GB",
+    "price": 110,
+    "image": "images/hiksemi128GBUSB-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "Reliable and Compact",
+      "USB 3.2",
+      "Windows and MAC Compatible"
+    ]
+  },
+
+    {
+    "id": "hddEnclosure",
+    "name": "HDD Enclosure",
+    "price": 190,
+    "image": "images/hddEnclosure-removebg-preview.png",
+    "brand": "Generic",
+    "category": "accessories",
+    "specs": [
+      "Compatible with 2.5 Inch Drives",
+      "Support Up to 1TB Drives",
+      "Driverless"
+    ]
+  },
+
+  
+    {
+    "id": "steelhddEnclosure",
+    "name": "HDD Enclosure",
+    "price": 200,
+    "image": "images/steelHDDEnclosure-removebg-preview.png",
+    "brand": "Generic",
+    "category": "accessories",
+    "specs": [
+      "Compatible with 2.5 Inch Drives",
+      "Support Up to 1TB Drives",
+      "Driverless"
+    ]
+  },
+
+{
+    "id": "typeCtoRj45",
+    "name": "Type-C to RJ45-LAN",
+    "price": 150,
+    "image": "images/typeCtoRJ45-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "Up to 1000Mbps",
+      "Backwards Compatible with USB 2.0",
+      "Supports Auto MDIX",
+      "Supports Full and Half Duplex"
+    ]
+  },
+
+{
+    "id": "usb2toRj45",
+    "name": "USB 2.0 to RJ45-LAN",
+    "price": 80,
+    "image": "images/usb2toRJ45-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "Up to 100Mbps",
+      "Supports 10Mbps and 100Mbps N-way auto-negotiation"
+    ]
+  },
+
+  {
+    "id": "nestyEarbuds",
+    "name": "Nesty Earbuds MH-200 Blast Series",
+    "price": 310,
+    "image": "images/nestyEarbuds-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "Quick Pairing Link",
+      "Comfortable to Wear",
+      "6 Hour Playtime"
+    ]
+  },
+
+  {
+    "id": "klGoEarbuds",
+    "name": "KLGO Earbuds",
+    "price": 150,
+    "image": "images/klGoEarbuds-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "True Wireless",
+      "Powerful Microphone",
+      "300H Standby"
+    ]
+  },
+
+{
+    "id": "bodyGlovePopEarphones",
+    "name": "Body Glove Pop In-Ear Earphones",
+    "price": 50,
+    "image": "images/bodyGlovePop-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "10mm Driver Unit",
+      "Frequency Response 20Hz - 20kHz",
+      "Impedance: 16 Ohm"
+    ]
+  },
+
+{
+    "id": "bodygloveLiteEarbuds",
+    "name": "Body Glove Lite Bluetooth Sport Earbuds",
+    "price": 250,
+    "image": "images/bodyGloveLite-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "Up to 4 Hours Playtime",
+      "Standby Up to 100 Hours",
+      "10m Wireless Range"
+    ]
+  },
+
+{
+    "id": "edHardyEarphones",
+    "name": "Ed Hardy Earphones",
+    "price": 120,
+    "image": "images/EdHardy-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "8mm Driver Unit",
+      "Frequency Range: 20Hz - 18kHz",
+      "21(dBA) Super Silent",
+      "Impedance 32 Ohm"
+    ]
+  },
+
+{
+    "id": "bodyGloveChargeandSyncCable",
+    "name": "Body Glove Charge and Sync Cable",
+    "price": 50,
+    "image": "images/bodyChargeAndSync-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "Micro-USB to Lightning Adapter",
+      "1 meter Cable Length"   
+    ]
+  },
+
+{
+    "id": "bodyGloveMiniDualUsbCarCharger",
+    "name": "Body Glove Mini Dual USB Car Charger",
+    "price": 50,
+    "image": "images/bodyMiniCarCharger-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "Charge 2 Devices at the Same Time",
+      "Input Voltage: 12-24V DC",
+      "21(dBA) Super Silent",
+      "Output: 5V 2.1 AMPS"
+    ]
+  },
+
+{
+    "id": "bodyGloveUsbCharger",
+    "name": "Body Glove USB Charger",
+    "price": 50,
+    "image": "images/bodyDualCharger-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "Charge 2 Devices at the Same Time",
+      "Input Voltage: 110-240V",
+      "Output: 5V 2.1 AMPS"
+    ]
+  },
+
+{
+    "id": "bodyGloveDualUsbChargeLightning",
+    "name": "Body Glove Dual USB Charger with Lightning Cable",
+    "price": 50,
+    "image": "images/bodyDualChargerwithLight-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "Charge 2 Devices at the Same Time",
+      "Input Voltage: 110-240V",
+      "Output: 5V 2.1 AMPS"
+    ]
+  },
+
+{
+    "id": "snugCarChargerwithLightningCable",
+    "name": "Snug Car Charger with Lightning Cable",
+    "price": 50,
+    "image": "images/snugCarCharger-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "Charge 2 Devices at the Same Time",
+      "Input Voltage: 12-24V DC",
+      "USB 1 Output: 5V/1A",
+      "USB 2 Output: 5V/2.4A"
+    ]
+  },
+
+{
+    "id": "snugHomeCharger",
+    "name": "Snug Home Charger",
+    "price": 50,
+    "image": "images/snugHomeCharger-removebg-preview.png",
+    "brand": "generic",
+    "category": "accessories",
+    "specs": [
+      "Charge 2 Devices at the Same Time",
+      "Input Voltage: 110-240VAC",
+      "USB 1 Output: 5V/1A",
+      "USB 2 Output: 5V/2.4A"
+    ]
+  },
+
+    {
+    "id": "2mTypeCcable",
+    "name": "Type C Data Cable",
+    "price": 100,
+    "image": "images/2mTypeCCable-removebg-preview.png",
+    "brand": "Generic",
+    "category": "accessories",
+    "specs": [
+      "Fast Data Transfer",
+      "Fast Charging",
+      "High Durability"
+    ]
+  },
+
+    {
+    "id": "klGoTypeCcable",
+    "name": "KLGO Type C Cable",
+    "price": 100,
+    "image": "images/klGoTypeCcable.png",
+    "brand": "Generic",
+    "category": "accessories",
+    "specs": [
+      "Fast Data Transfer",
+      "Fast Charging",
+      "High Durability"
+    ]
+  },
+
+    {
+    "id": "multiplugAdapter",
+    "name": "Multiplug Adapter",
+    "price": 220,
+    "image": "images/multiPlugAdapter-removebg-preview.png",
+    "brand": "Generic",
+    "category": "accessories",
+    "specs": [
+      "Versatile Power Solution",
+      "Durable Build",
+      "Plug & Play"
+    ]
+  },
+
+  {
+    "id": "twoPinPlugAdapter",
+    "name": "Two-Pin Plug Adapter",
+    "price": 35,
+    "image": "images/twoPinPlugAdapter-removebg-preview.png",
+    "brand": "Generic",
+    "category": "accessories",
+    "specs": [
+      "Compact Two-Pin Adapter",
+      "Durable Construction",
+      "Lightweight & Portable"
+    ]
+  }
+]
+
+
+
+

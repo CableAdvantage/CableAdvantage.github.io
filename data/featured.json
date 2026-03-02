@@ -1,0 +1,57 @@
+[
+  {
+    "id": "featured-1",
+    "name": "Product 1",
+    "price": 1000,
+    "image": "images/winterFreezeGigabyte.jpg",
+    "specs": ["Spec A", "Spec B"]
+  },
+
+  {
+    "id": "featured-2",
+    "name": "Product 2",
+    "price": 1200,
+    "image": "images/winterFreezeEvetech.jpg",
+    "specs": ["Spec X", "Spec Y"]
+  },
+
+   {
+    "id": "featured-2",
+    "name": "Product 2",
+    "price": 1200,
+    "image": "images/winterFreezeMecerCombo.jpg",
+    "specs": ["Spec X", "Spec Y"]
+  },
+
+   {
+    "id": "featured-2",
+    "name": "Product 2",
+    "price": 1200,
+    "image": "images/winterFreezeDesktop.jpg",
+    "specs": ["Spec X", "Spec Y"]
+  },
+
+   {
+    "id": "featured-2",
+    "name": "Product 2",
+    "price": 1200,
+    "image": "images/winterFreezeHP.jpg",
+    "specs": ["Spec X", "Spec Y"]
+  },
+
+   {
+    "id": "featured-2",
+    "name": "Product 2",
+    "price": 1200,
+    "image": "images/winterFreezeHarwa.jpg",
+    "specs": ["Spec X", "Spec Y"]
+  },
+
+   {
+    "id": "featured-2",
+    "name": "Product 2",
+    "price": 1200,
+    "image": "images/winterFreezeK8.jpg",
+    "specs": ["Spec X", "Spec Y"]
+  }
+]
